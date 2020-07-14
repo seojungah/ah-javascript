@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="./index.css">
+
+    <!--main Slider container-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+    <!-- header.html -->
+    <header id="header"></header>
+
+    <!-- main.html -->
+    <main id="main"></main>
+
+    <!-- footer.html -->
+    <footer id="footer"></footer>
+
+    <script src="./js/default.js"></script>
+    <script src="./js/index.js"></script>
+
+    <!--main Slider container-->
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+        const swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+            observer: true,
+            observeParents: true
+        });
+    </script>
+</body>
+
+</html>
