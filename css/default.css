@@ -1,0 +1,79 @@
+a {
+  text-decoration: none;
+}
+/* 클릭하지 않았을 때 */
+a:link {
+}
+
+/* 클릭했을 때 */
+a:visited {
+}
+
+/*--------------
+     footer
+--------------*/
+
+footer {
+  position: relative;
+  padding: 5rem;
+}
+
+footer > div {
+  display: inline-flex;
+  flex-direction: row;
+  width: 10rem;
+  justify-content: space-between;
+}
+
+footer > .icon {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+}
+
+footer > .icon > div {
+  font-size: 1.7rem;
+}
+
+footer a {
+  position: relative;
+}
+
+footer > .icon > div > a > img {
+  width: 2rem;
+}
+
+footer > .icon > div > a > p {
+  display: none;
+  position: absolute;
+  width: 4.5rem;
+  top: 140%;
+  left: -115%;
+  padding: 0.2rem 1rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #222222;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+footer > .icon > div > a > p:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -0.5rem;
+  border: solid transparent;
+  border-color: transparent;
+  border-bottom-color: #222222;
+  border-width: 0.5rem;
+  pointer-events: none;
+  content: " ";
+}
+
+footer > .icon > div > a:hover p {
+  display: block;
+}

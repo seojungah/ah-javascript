@@ -74,3 +74,24 @@ loadIndexPage();
 //     ));
 //     return html.join('');
 // };
+
+
+
+
+//search works item
+// const search = document.querySelector("input id");
+
+// search.addEventListener('keyup', () => {
+
+//       const inputValue = search.value.toUpperCase();//검색창 값 가져오고 모두 대문자
+
+//       const itemTag = [...document.querySelectorAll("검색 될 키워드들")];
+
+//       const searchTag = itemTag.filter((tag) => {
+//             const tagUpperCase = tag.innerText.toUpperCase();
+//             const searchNum = tagUpperCase.indexOf(inputValue);
+//             if (searchNum > -1) return tag;
+//       });
+
+//       searchTag.forEach((tag) => tag.parentNode.style.display = '');
+// });
