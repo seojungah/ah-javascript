@@ -1,0 +1,42 @@
+/* Noto Sans KR */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+/* Noto Sans  */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:lang(ko) {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+:lang(en) {
+  font-family: "Noto Sans", sans-serif;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 5% auto 2%;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.6;
+  margin: 2% auto 5%;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 2rem;
+  margin: 5% auto;
+}

@@ -1,0 +1,24 @@
+p,
+h1,
+h2,
+h3,
+h4 {
+  display: inline;
+}
+
+div {
+  border-bottom: 1px solid #eeeeee !important;
+  padding: 2rem 4rem !important;
+}
+
+div > div {
+  display: inline;
+  font-family: "Noto Sans", sans-serif;
+  color: #2196f3;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 0 2rem !important;
+  margin-left: 2rem;
+  border-bottom: none !important;
+  border-left: 1px solid #aaaaaa;
+}
