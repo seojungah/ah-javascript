@@ -2,7 +2,7 @@
 
 [Go to Portfolio site](https://seojungah.github.io/)
 
-## git 저장소 복제
+## 💾 git 저장소 복제
 
 ```bash
 $ git clone https://github.com/seojungah/seojungah.github.io.git
