@@ -1,5 +1,7 @@
 # seojungah.github.io
 
+[portfolio site](https://seojungah.github.io/)
+
 ## git 저장소 복제
 
 ```bash
