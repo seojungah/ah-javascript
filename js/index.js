@@ -7,28 +7,33 @@
       header
 ----------------*/
 
-// const loadHeader = async () => {
+const loadHeader = async () => {
 
-//     const header = document.querySelector("#header");
-//     header.innerHTML = await fetchHtmlAsText("../default/header.html");
+      const naviBtn = document.querySelector("#Hamburger_btn");
+      const menu = document.querySelector("#menu");
 
-//     const footer = document.querySelector("#footer");
-//     footer.innerHTML = await fetchHtmlAsText("../default/footer.html");
+      naviBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            naviBtn.classList.toggle('active');
+            menu.classList.toggle('on');
+      });
+
+      const logo = document.querySelector('#logo');
+      // logo.data = "../img";
 
 
-//     const naviBtn = document.querySelector("#navi-btn");
-//     const menu = document.querySelector("#menu");
+      //header menu click event 
+      const aTag = document.querySelectorAll('#menu > li > a');
+      const hearderMenu = [...aTag];
+      hearderMenu.forEach((value, index) => {
+            const menuPointer = document.querySelector(`#header-menu-0${index + 1}`);
+            const menuTop = menuPointer.getBoundingClientRect().top;
+            value.addEventListener('click', () => {
+                  window.scrollTo(0, menuTop);
+            });
+      });
 
-//     naviBtn.addEventListener('click', (e) => {
-//         e.preventDefault();
-//         naviBtn.classList.toggle('active');
-//         menu.classList.toggle('on');
-//     });
-
-//     const logo = document.querySelector('.logo');
-//     logo.data = "../default/header/main_logo.svg";
-
-// };
+};
 
 // loadHeader();
 
@@ -42,6 +47,10 @@ const loadIndexPage = async () => {
       // main
       const main = document.querySelector("#main");
       main.innerHTML = await fetchHtmlAsText("./main.html");
+
+      // skill
+      const skill = document.querySelector("#skill");
+      skill.innerHTML = await fetchHtmlAsText("./skill.html");
 };
 
 loadIndexPage();
@@ -95,3 +104,9 @@ loadIndexPage();
 
 //       searchTag.forEach((tag) => tag.parentNode.style.display = '');
 // });
+
+
+/**--------------
+    progress
+----------------*/
+

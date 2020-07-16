@@ -84,11 +84,11 @@ faviconMeta.forEach((value, content) => (makeFaviconMeta({ ...value })));
 const loadPage = async () => {
     // header
     const header = document.querySelector("#header");
-    header.innerHTML = await fetchHtmlAsText("./header.html");
+    header.innerHTML = await fetchHtmlAsText("/header.html");
 
     // footer
     const footer = document.querySelector("#footer");
-    footer.innerHTML = await fetchHtmlAsText("./footer.html");
+    footer.innerHTML = await fetchHtmlAsText("/footer.html");
 };
 
 loadPage();
