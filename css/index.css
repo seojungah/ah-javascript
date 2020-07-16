@@ -1,0 +1,28 @@
+#skill {
+  /* text-align: center; */
+}
+
+#skill > .progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+#skill > .progress > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+#skill > .progress > div > svg {
+  width: 9rem;
+}
+
+#skill > .progress > div > svg > path {
+  fill: none;
+  stroke: black;
+  stroke-width: 1rem;
+}

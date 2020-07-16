@@ -1,17 +1,160 @@
-a {
+/* ===================================
+                header
+==================================== */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  text-align: initial;
+}
+
+header > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* menu */
+header > div > .menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 5%;
+}
+
+header > div > .menu {
+  display: inline-block;
+}
+
+header > div > .menu > li {
+  display: none;
+  list-style: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+header > div > .menu.on li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header > div > .menu > li > a {
+  position: relative;
+  display: inline-block;
+  color: #fff;
   text-decoration: none;
-}
-/* 클릭하지 않았을 때 */
-a:link {
+  margin: auto 2.5rem;
 }
 
-/* 클릭했을 때 */
-a:visited {
+header > div > .menu > li > a::before,
+header > div > .menu > li > a::after {
+  content: "";
+  position: relative;
+  display: block;
+  visibility: hidden;
+  width: 100%;
+  height: 1px;
+  background: rgba(225, 225, 225, 0.8);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 4px;
 }
 
-/*--------------
-     footer
---------------*/
+header > div > .menu > li > a::before {
+  top: 0;
+  opacity: 0.4;
+}
+
+header > div > .menu > li > a::after {
+  bottom: 0;
+  opacity: 0.4;
+}
+
+header > div > .menu > li > a:hover::before,
+header > div > .menu > li > a:hover::after {
+  visibility: visible;
+  -webkit-animation-name: line;
+  animation-name: line;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+/* hamburger_btn */
+
+header > div > .hamburger_btn {
+  display: inline-block;
+  position: absolute;
+  right: 5%;
+  width: 2.5rem;
+  height: auto;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header > div > .hamburger_btn > span {
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: px;
+  background-color: #fff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+header > div > .hamburger_btn > span:nth-child(2) {
+  margin: 0.6rem auto;
+}
+
+@-webkit-keyframes line {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes line {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/*====================================
+                footer
+==================================== */
 
 footer {
   position: relative;

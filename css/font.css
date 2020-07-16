@@ -40,3 +40,14 @@ p {
   line-height: 2rem;
   margin: 5% auto;
 }
+
+a {
+  text-decoration: none;
+}
+/* 클릭하지 않았을 때 */
+a:link {
+}
+
+/* 클릭했을 때 */
+a:visited {
+}
