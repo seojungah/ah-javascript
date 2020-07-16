@@ -5,6 +5,7 @@
 
 
 ## 🌏 Browser Support
+구글 크롬 환경에서 제작하였습니다.
 | Chrome | Internet Explorer |
 | :----: | :---------------: |
 |  Yes   |        No         |
