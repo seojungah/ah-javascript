@@ -39,6 +39,9 @@
   fill: none;
   stroke-width: 1rem;
   stroke: #ff00ff;
+}
+
+#skill > .progress > div > .front > path .ani {
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
   animation: dash 2s ease-in forwards;
