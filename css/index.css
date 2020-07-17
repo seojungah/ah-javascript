@@ -21,8 +21,30 @@
   width: 9rem;
 }
 
-#skill > .progress > div > svg > path {
+#skill > .progress > div > .front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#skill > .progress > div > .back > path {
   fill: none;
-  stroke: black;
   stroke-width: 1rem;
+  stroke: #eeeeee;
+}
+
+#skill > .progress > div > .front > path {
+  fill: none;
+  stroke-width: 1rem;
+  stroke: #ff00ff;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 2s ease-in forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
