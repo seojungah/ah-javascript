@@ -12,6 +12,7 @@
 
 #skill > .progress > div {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-content: center;
