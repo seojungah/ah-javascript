@@ -3,144 +3,103 @@
 ==================================== */
 
 header {
+  display: block;
   position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
   top: 0;
   left: 0;
-  width: 100%;
-  height: 3.5rem;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
-  text-align: initial;
 }
 
 header > .menu {
   display: block;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-/* menu */
-header > div > .menu {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 5%;
-}
-
-header > div > .menu {
-  display: inline-block;
-}
-
-header > div > .menu > li {
-  display: none;
-  list-style: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-}
-
-header > div > .menu.on li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header > div > .menu > li > a {
-  position: relative;
-  display: inline-block;
+  position: absolute;
+  width: 70vh;
+  height: 100vh;
+  left: -70vh;
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  text-decoration: none;
-  margin: auto 2.5rem;
+  backdrop-filter: blur(20px);
+  transition: 0.3s linear;
 }
 
-header > div > .menu > li > a::before,
-header > div > .menu > li > a::after {
-  content: "";
-  position: relative;
-  display: block;
-  visibility: hidden;
+header > .menu.on {
+  left: 0;
+  transition: 0.3s linear;
+}
+
+header > .menu > div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30vh;
+}
+
+header > .menu > div > h1 {
+  padding: 2rem 0;
   width: 100%;
-  height: 1px;
-  background: rgba(225, 225, 225, 0.8);
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-bottom: 4px;
+  text-align: center;
+  font-weight: 300;
 }
 
-header > div > .menu > li > a::before {
-  top: 0;
-  opacity: 0.4;
+header > .menu > div > h1:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 0.3s linear;
 }
 
-header > div > .menu > li > a::after {
-  bottom: 0;
-  opacity: 0.4;
-}
+/*  hamburger button  */
 
-header > div > .menu > li > a:hover::before,
-header > div > .menu > li > a:hover::after {
-  visibility: visible;
-  -webkit-animation-name: line;
-  animation-name: line;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
-}
-
-/* hamburger_btn */
-
-header > div > .hamburger_btn {
+header > .hamburger_btn {
   display: inline-block;
   position: absolute;
-  right: 5%;
-  width: 2.5rem;
-  height: auto;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  width: 2rem;
+  height: 2rem;
+  top: 3rem;
+  left: 3rem;
+  z-index: 21;
 }
 
-header > div > .hamburger_btn > span {
-  display: block;
-  position: relative;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  height: px;
+header > .hamburger_btn > .navi_line {
+  position: absolute;
   background-color: #fff;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  width: 100%;
+  height: 0.2rem;
+  transition: 0.5s linear;
 }
 
-header > div > .hamburger_btn > span:nth-child(2) {
-  margin: 0.6rem auto;
+header > .hamburger_btn:hover > .navi_line {
+  background-color: rgba(225, 225, 225, 0.5);
+  transition: 0.1s linear;
 }
 
-@-webkit-keyframes line {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+header > .hamburger_btn > #line1 {
+  top: 0;
+  width: 50%;
 }
 
-@keyframes line {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+header > .hamburger_btn > #line2 {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+header > .hamburger_btn > #line3 {
+  bottom: 0;
+  right: 0;
+  width: 50%;
+}
+
+/*  hamburger button Active */
+header > .hamburger_btn.active > #line1 {
+  transform: rotate(45deg);
+  top: 30%;
+  left: 5%;
+}
+header > .hamburger_btn.active > #line2 {
+  transform: rotate(-45deg);
+}
+header > .hamburger_btn.active > #line3 {
+  transform: rotate(45deg);
+  bottom: 20%;
+  right: 5%;
 }
 
 /*====================================

@@ -82,16 +82,52 @@ faviconMeta.forEach((value, content) => (makeFaviconMeta({ ...value })));
 
 
 const loadPage = async () => {
-    // header
-    const header = document.querySelector("#header");
-    header.innerHTML = await fetchHtmlAsText("/header.html");
-
     // footer
     const footer = document.querySelector("#footer");
     footer.innerHTML = await fetchHtmlAsText("/footer.html");
 };
 
 loadPage();
+
+
+
+/**--------------
+      header
+----------------*/
+
+const loadHeader = async () => {
+
+    // header
+    const header = document.querySelector("#header");
+    header.innerHTML = await fetchHtmlAsText("/header.html");
+
+    const naviBtn = document.querySelector("header > .hamburger_btn");
+    const menu = document.querySelector("header > .menu ");
+
+    naviBtn.addEventListener('click', () => {
+        header.classList.toggle('active');
+        naviBtn.classList.toggle('active');
+        menu.classList.toggle('on');
+    });
+
+    // const logo = document.querySelector('#logo');
+    // logo.data = "../img";
+
+
+    //header menu click event 
+    // const aTag = document.querySelectorAll('#menu h1');
+    // const hearderMenu = [...aTag];
+    // hearderMenu.forEach((value, index) => {
+    //     const menuPointer = document.querySelector(`#header-menu-0${index + 1}`);
+    //     const menuTop = menuPointer.getBoundingClientRect().top;
+    //     value.addEventListener('click', () => {
+    //         window.scrollTo(0, menuTop);
+    //     });
+    // });
+
+};
+
+loadHeader();
 
 
 

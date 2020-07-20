@@ -3,40 +3,6 @@
 
 
 
-// /**--------------
-//       header
-// ----------------*/
-
-// const loadHeader = async () => {
-
-//       const naviBtn = document.querySelector("#Hamburger_btn");
-//       const menu = document.querySelector("#menu");
-
-//       naviBtn.addEventListener('click', (e) => {
-//             e.preventDefault();
-//             naviBtn.classList.toggle('active');
-//             menu.classList.toggle('on');
-//       });
-
-//       const logo = document.querySelector('#logo');
-//       // logo.data = "../img";
-
-
-//       //header menu click event 
-//       const aTag = document.querySelectorAll('#menu > li > a');
-//       const hearderMenu = [...aTag];
-//       hearderMenu.forEach((value, index) => {
-//             const menuPointer = document.querySelector(`#header-menu-0${index + 1}`);
-//             const menuTop = menuPointer.getBoundingClientRect().top;
-//             value.addEventListener('click', () => {
-//                   window.scrollTo(0, menuTop);
-//             });
-//       });
-
-// };
-
-// loadHeader();
-
 
 
 /**--------------
@@ -44,13 +10,13 @@
 ----------------*/
 
 const loadIndexPage = async () => {
-      // main
-      const main = document.querySelector("#main");
-      main.innerHTML = await fetchHtmlAsText("./main.html");
+    // main
+    const main = document.querySelector("#main");
+    main.innerHTML = await fetchHtmlAsText("./main.html");
 
-      // skill
-      const skill = document.querySelector("#skill");
-      skill.innerHTML = await fetchHtmlAsText("./skill.html");
+    // skill
+    const skill = document.querySelector("#skill");
+    skill.innerHTML = await fetchHtmlAsText("./skill.html");
 };
 
 loadIndexPage();
