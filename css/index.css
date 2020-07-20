@@ -1,3 +1,38 @@
+/* ===================================
+                 Main
+==================================== */
+
+#main {
+  position: relative;
+}
+
+#main > .info {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 20%;
+  transform: translate(0, -65%);
+}
+
+#main > .info > p {
+  margin: 1rem auto;
+  width: 30em;
+}
+#main > .info > h1 {
+  margin: 0;
+}
+
+#main > .info > h1 > span {
+  display: block;
+  margin: 1rem 0;
+  font-size: 3rem;
+}
+
+/* ===================================
+                 Skill
+==================================== */
+
 #skill {
   /* text-align: center; */
 }
@@ -38,7 +73,7 @@
 #skill > .progress > div > .front > path {
   fill: none;
   stroke-width: 1rem;
-  stroke: #ff00ff;
+  stroke: #000;
 }
 
 #skill > .progress > div > .front > path .ani {
