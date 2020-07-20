@@ -38,15 +38,15 @@ cssList.forEach((value, index) => (makeFaviconLink({ ...value })));
 ----------------*/
 
 
-// const faviconList = [
-//     { rel: 'apple-touch-icon', sizes: '180x180', href: '../favicon/apple-touch-icon.png' },
-//     { rel: 'icon', type: 'image/png', sizes: '32x32', href: '../favicon/favicon-32x32.png' },
-//     { rel: 'icon', type: 'image/png', sizes: '16x16', href: '../favicon/favicon-16x16.png' },
-//     { rel: 'manifest', href: '../favicon/site.webmanifest' },
-//     { rel: 'shortcut icon', href: '../favicon/favicon.ico' },
-// ];
+const faviconList = [
+    { rel: 'apple-touch-icon', sizes: '180x180', href: './favicon/apple-touch-icon.png' },
+    { rel: 'icon', type: 'image/png', sizes: '32x32', href: './favicon/favicon-32x32.png' },
+    { rel: 'icon', type: 'image/png', sizes: '16x16', href: './favicon/favicon-16x16.png' },
+    { rel: 'manifest', href: '../favicon/site.webmanifest' },
+    { rel: 'shortcut icon', href: '../favicon/favicon.ico' },
+];
 
-// faviconList.forEach((value, index) => (makeFaviconLink({ ...value })));
+faviconList.forEach((value, index) => (makeFaviconLink({ ...value })));
 
 
 
@@ -66,10 +66,9 @@ const makeFaviconMeta = ({ name, content }) => {
 const faviconMeta = [
     { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
     { name: 'description', content: 'Bootstrap 3 template for corporate business' },
-    //favicon
-    // { name: 'msapplication-config', content: '#./favicon/browserconfig.xml' },
-    // { name: 'msapplication-TileColor', content: '#b91d47' },
-    // { name: 'theme-color', content: '#ffffff' },
+    { name: 'msapplication-config', content: '#./favicon/browserconfig.xml' },
+    { name: 'msapplication-TileColor', content: '#5100ba' },
+    { name: 'theme-color', content: '#ffffff' },
 ];
 
 faviconMeta.forEach((value, content) => (makeFaviconMeta({ ...value })));
