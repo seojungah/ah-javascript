@@ -35,8 +35,8 @@
                  Skill
 ==================================== */
 
-#skill {
-  /* text-align: center; */
+#skill h1 {
+  margin-left: 15%;
 }
 
 #skill > .progress {
@@ -69,13 +69,13 @@
 #skill > .progress > div > .back > path {
   fill: none;
   stroke-width: 1rem;
-  stroke: #eeeeee;
+  stroke: #e0c5fe;
 }
 
 #skill > .progress > div > .front > path {
   fill: none;
   stroke-width: 1rem;
-  stroke: #000;
+  stroke: #ad50ff;
 }
 
 #skill > .progress > div > .front > path {
