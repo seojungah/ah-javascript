@@ -13,6 +13,8 @@
   top: 50%;
   left: 20%;
   transform: translate(0, -65%);
+  color: #fff;
+  mix-blend-mode: overlay;
 }
 
 #main > .info > p {
@@ -76,10 +78,10 @@
   stroke: #000;
 }
 
-#skill > .progress > div > .front > path .ani {
+#skill > .progress > div > .front > path {
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  animation: dash 2s ease-in forwards;
+  animation: dash 3s ease-in forwards;
 }
 
 @keyframes dash {
