@@ -36,7 +36,8 @@
 ==================================== */
 
 #skill h1 {
-  margin-left: 15%;
+  margin-left: 6%;
+  margin-bottom: 3%;
 }
 
 #skill > .progress {
@@ -56,7 +57,7 @@
 }
 
 #skill > .progress > div > svg {
-  width: 9rem;
+  width: 10rem;
 }
 
 #skill > .progress > div > .front {
@@ -68,13 +69,13 @@
 
 #skill > .progress > div > .back > path {
   fill: none;
-  stroke-width: 1rem;
+  stroke-width: 0.3rem;
   stroke: #e0c5fe;
 }
 
 #skill > .progress > div > .front > path {
   fill: none;
-  stroke-width: 1rem;
+  stroke-width: 0.3rem;
   stroke: #ad50ff;
 }
 
