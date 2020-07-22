@@ -27,6 +27,7 @@ const cssList = [
     { rel: 'stylesheet', href: './css/default.css' },
     { rel: 'stylesheet', href: './css/font.css' },
     { rel: 'stylesheet', href: './css/color.css' },
+    { rel: 'stylesheet', href: './css/mobile.css' },
 ];
 
 cssList.forEach((value, index) => (makeFaviconLink({ ...value })));

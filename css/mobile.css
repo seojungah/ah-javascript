@@ -1,0 +1,102 @@
+@media (max-width: 768px) {
+  /* ===================================
+                 Main
+==================================== */
+
+  #main {
+    width: 100%;
+  }
+
+  .swiper-container {
+    height: 60vh;
+    width: 100%;
+  }
+
+  #main > .info {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 55%;
+    left: 10%;
+    color: #fff;
+    mix-blend-mode: overlay;
+  }
+
+  #main > .info > p {
+    margin: 1rem auto;
+    width: 30em;
+  }
+  #main > .info > h1 {
+    margin: 0;
+  }
+
+  #main > .info > h1 > span {
+    display: block;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+  }
+
+  :root {
+    --swiper-navigation-size: 1.8rem !important;
+  }
+
+  /* ===================================
+                 Skill
+  ==================================== */
+
+  #skill h1 {
+    margin: 10% auto !important;
+  }
+
+  #skill > .progress {
+    flex-wrap: wrap;
+    width: 95%;
+  }
+
+  #skill > .progress > div {
+    margin: 5%;
+  }
+
+  #skill > .progress > div > svg {
+    width: 8rem;
+  }
+
+  /* ===================================
+                header
+==================================== */
+
+  header > .menu {
+    width: 80vw;
+    height: 100vh;
+    left: -80vh;
+    transition: 0.3s linear;
+  }
+
+  /*  hamburger button  */
+
+  header > .hamburger_btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 2rem;
+    left: 2rem;
+  }
+
+  header > .hamburger_btn > .navi_line {
+    height: 0.15rem;
+  }
+
+  /*  hamburger button Active */
+  header > .hamburger_btn.active {
+    left: 21.5rem;
+  }
+
+  header > .hamburger_btn.active > #line1 {
+    top: 35%;
+    left: 5%;
+  }
+
+  header > .hamburger_btn.active > #line3 {
+    bottom: 20%;
+    right: 10%;
+  }
+}

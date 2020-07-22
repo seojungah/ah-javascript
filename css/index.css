@@ -31,6 +31,10 @@
   font-size: 3rem;
 }
 
+:root {
+  --swiper-theme-color: #fff !important;
+}
+
 /* ===================================
                  Skill
 ==================================== */
