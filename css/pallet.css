@@ -6,12 +6,12 @@ h4 {
   display: inline;
 }
 
-div {
+body > div {
   border-bottom: 1px solid #eeeeee !important;
   padding: 2rem 4rem !important;
 }
 
-div > div {
+div > .title {
   display: inline;
   font-family: "Noto Sans", sans-serif;
   color: #2196f3;

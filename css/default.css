@@ -175,3 +175,55 @@ footer > .icon > div > a > p:after {
 footer > .icon > div > a:hover p {
   display: block;
 }
+
+/* ===================================
+                 progress
+==================================== */
+
+.progress {
+  display: inline-block;
+  text-align: center;
+}
+
+.progress > div {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.progress > div > svg {
+  width: 10rem;
+}
+
+.progress > div > .front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.progress > div > .back > path {
+  fill: none;
+  stroke-width: 0.3rem;
+  stroke: #ece2f7;
+}
+
+.progress > div > .front > path {
+  fill: none;
+  stroke-width: 0.3rem;
+  stroke: #ad50ff;
+}
+
+.progress > div > .front > path {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 3s ease-in forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
