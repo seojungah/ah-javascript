@@ -11,7 +11,6 @@ const fetchHtmlAsText = async (url) => {
        css
 ----------------*/
 
-
 const makeFaviconLink = ({ rel, type, sizes, href }) => {
     let link = document.createElement('link');
     rel && (link.rel = rel);
@@ -33,12 +32,9 @@ const cssList = [
 
 cssList.forEach((value, index) => (makeFaviconLink({ ...value })));
 
-
-
 /**--------------
      favicon
 ----------------*/
-
 
 const faviconList = [
     { rel: 'apple-touch-icon', sizes: '180x180', href: './favicon/apple-touch-icon.png' },
@@ -49,9 +45,6 @@ const faviconList = [
 ];
 
 faviconList.forEach((value, index) => (makeFaviconLink({ ...value })));
-
-
-
 
 /**--------------
        meta
@@ -75,12 +68,9 @@ const faviconMeta = [
 
 faviconMeta.forEach((value, content) => (makeFaviconMeta({ ...value })));
 
-
-
 /**--------------
     Load Page
 ----------------*/
-
 
 const loadPage = async () => {
     // footer
@@ -89,8 +79,6 @@ const loadPage = async () => {
 };
 
 loadPage();
-
-
 
 /**--------------
       header
@@ -111,21 +99,39 @@ const loadHeader = async () => {
         menu.classList.toggle('on');
     });
 
-    // const logo = document.querySelector('#logo');
-    // logo.data = "../img";
+    // search
+    const search = document.querySelector(".menu .search input");
 
+    search.addEventListener('keyup', () => {
 
-    //header menu click event 
-    // const aTag = document.querySelectorAll('#menu h1');
-    // const hearderMenu = [...aTag];
-    // hearderMenu.forEach((value, index) => {
-    //     const menuPointer = document.querySelector(`#header-menu-0${index + 1}`);
-    //     const menuTop = menuPointer.getBoundingClientRect().top;
-    //     value.addEventListener('click', () => {
-    //         window.scrollTo(0, menuTop);
-    //     });
-    // });
+        const main = document.querySelector('#main');
+        main.style.display = 'none';
 
+        const inputValue = search.value.toUpperCase();
+        const itemTag = [...document.querySelectorAll(".portfolio .name")];
+
+        const searchTag = itemTag.filter((tag) => {
+            const tagUpperCase = tag.innerText.toUpperCase();
+            const searchNum = tagUpperCase.indexOf(inputValue);
+            if (searchNum > -1) return tag;
+        });
+
+        searchTag.forEach((tag) => tag.parentNode.style.display = '');
+
+    });
+
+    // header menu click event 
+    const moveEvent = (menu, place) => {
+        const menuPointer = document.querySelector(place);
+        const menuTop = menuPointer.getBoundingClientRect().top;
+        menu.addEventListener('click', () => {
+            window.scrollTo(0, menuTop);
+        });
+    };
+
+    const aTag = document.querySelectorAll('#menu h1');
+    const hearderMenu = [...aTag];
+    hearderMenu.forEach((value, index) => { moveEvent(value, '.intro'); });
 };
 
 loadHeader();
