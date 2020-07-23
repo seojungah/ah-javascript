@@ -23,11 +23,12 @@ const makeFaviconLink = ({ rel, type, sizes, href }) => {
 };
 
 const cssList = [
-    { rel: 'stylesheet', href: './css/reset.css' },
-    { rel: 'stylesheet', href: './css/default.css' },
-    { rel: 'stylesheet', href: './css/font.css' },
-    { rel: 'stylesheet', href: './css/color.css' },
-    { rel: 'stylesheet', href: './css/mobile.css' },
+    { rel: 'stylesheet', href: './css/style/reset.css' },
+    { rel: 'stylesheet', href: './css/style/font.css' },
+    { rel: 'stylesheet', href: './css/style/color.css' },
+    { rel: 'stylesheet', href: './css/default/footer.css' },
+    { rel: 'stylesheet', href: './css/default/header.css' },
+    { rel: 'stylesheet', href: './css/default/progress.css' },
 ];
 
 cssList.forEach((value, index) => (makeFaviconLink({ ...value })));
