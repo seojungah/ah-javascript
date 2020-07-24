@@ -22,9 +22,6 @@ const loadIndexPage = async () => {
     const main = document.querySelector("#main");
     main.innerHTML = await fetchHtmlAsText("./main.html");
 
-    // skill
-    const skill = document.querySelector("#skill");
-    skill.innerHTML = await fetchHtmlAsText("./skill.html");
 };
 
 loadIndexPage();
