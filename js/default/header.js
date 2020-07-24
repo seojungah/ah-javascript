@@ -9,20 +9,21 @@ const loadHeader = async () => {
     header.innerHTML = await fetchHtmlAsText("/header.html");
 
     // header open & close
-    const body = document.querySelector("body");
     const headerOpen = document.querySelector("header > .hamburger_btn");
     const headerClose = document.querySelector("header > .bg ");
+
     const menu = document.querySelector("header > .menu");
 
     const toggleHeader = (btn) => {
         btn.addEventListener('click', () => {
+            headerOpen.classList.toggle('active');
+            menu.classList.toggle('sliding');
+
             document.querySelector("#main").classList.toggle('fixing');
             document.querySelector("#skill").classList.toggle('fixing');
             document.querySelector("#footer").classList.toggle('fixing');
-
-            headerOpen.classList.toggle('active');
             headerClose.classList.toggle('show');
-            menu.classList.toggle('sliding');
+            header.classList.toggle('main');
         });
     };
 

@@ -1,35 +1,13 @@
 /* ===================================
-               Search
-==================================== */
-
-header > .menu > .search {
-  display: block;
-  position: relative;
-  margin: auto;
-  margin-top: 2.5rem;
-  margin-left: 2rem;
-}
-
-header > .menu > .search > input {
-  display: inline-block;
-  width: 50%;
-  height: 3.5vh;
-  border: 0.1rem solid #fff;
-  border-radius: 2rem;
-  padding-left: 2rem;
-}
-
-header > .menu > .search > input:focus {
-  outline: none;
-}
-
-/* ===================================
            header menu
 ==================================== */
 
 header {
   display: block;
   position: fixed;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
   z-index: 20;
@@ -38,6 +16,7 @@ header {
 header > .bg {
   display: none;
   position: fixed;
+  /* mix-blend-mode: multiply; */
   width: 60vw;
   height: 100vh;
   top: 0;
@@ -79,7 +58,6 @@ header > .menu > div > h1::before {
   width: 20%;
   height: 1.5rem;
   margin: 0 auto;
-  mix-blend-mode: multiply;
   background-color: #7e00ff;
 }
 
@@ -90,25 +68,6 @@ header > .menu > div > h1:hover {
 header > .menu > div > h1:hover::before {
   transition: 0.3s linear;
   display: inline-block;
-}
-
-/* toggle */
-
-.fixing {
-  width: 60vw;
-  margin-left: 40vw;
-  transition: 0.3s linear;
-  box-sizing: border-box;
-}
-
-.show {
-  display: block;
-  box-sizing: border-box;
-}
-
-.sliding {
-  left: 0;
-  transition: 0.3s linear;
 }
 
 /* ===================================
@@ -153,9 +112,37 @@ header > .hamburger_btn > #line3 {
   width: 50%;
 }
 
+/* ===================================
+                toggle
+==================================== */
+
+.fixing {
+  width: 57vw;
+  margin-left: 41vw;
+  box-sizing: border-box;
+  transition: 0.3s linear;
+}
+
+header.main {
+  border: 2rem solid #222222;
+  transition: 0.3s linear;
+}
+
+header > .bg.show {
+  display: block;
+  border: 2rem solid #222222;
+  border-radius: 3rem;
+  box-sizing: border-box;
+}
+
+header > .menu.sliding {
+  left: 0;
+  transition: 0.3s linear;
+}
+
 /*  hamburger button Active */
 header > .hamburger_btn.active {
-  left: 35rem;
+  left: 20vw;
 }
 
 header > .hamburger_btn.active > #line1 {
@@ -170,6 +157,31 @@ header > .hamburger_btn.active > #line3 {
   transform: rotate(45deg);
   bottom: 20%;
   right: 5%;
+}
+
+/* ===================================
+               Search
+==================================== */
+
+header > .menu > .search {
+  display: block;
+  position: relative;
+  margin: auto;
+  margin-top: 2.5rem;
+  margin-left: 2rem;
+}
+
+header > .menu > .search > input {
+  display: inline-block;
+  width: 50%;
+  height: 3.5vh;
+  border: 0.1rem solid #fff;
+  border-radius: 2rem;
+  padding-left: 2rem;
+}
+
+header > .menu > .search > input:focus {
+  outline: none;
 }
 
 /* ===================================

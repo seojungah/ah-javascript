@@ -18,7 +18,9 @@ footer > .icon > div > a > p {
   background: #222222;
 }
 
-header > .menu,
+header > .menu {
+  background-color: #222222;
+}
 header > .menu > div > h1:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -44,8 +46,4 @@ footer > .icon > div > a > p:after {
 
 :root {
   --swiper-theme-color: #fff !important;
-}
-
-header > .bg.over {
-  border: 3px solid #222222;
 }
