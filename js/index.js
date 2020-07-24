@@ -39,3 +39,9 @@ loadIndexPage();
 //     if (getScroll >= 400) { }
 //     if (getScroll >= 1450) { }
 // }
+
+
+/**--------------
+    progress
+----------------*/
+

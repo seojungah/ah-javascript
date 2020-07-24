@@ -42,9 +42,10 @@
 #skill h1 {
   margin-left: 6%;
   margin-bottom: 3%;
+  font-weight: 700;
 }
 
-#skill > .progress {
+#skill > .list {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
