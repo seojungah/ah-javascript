@@ -90,11 +90,28 @@ const loadHeader = async () => {
     const header = document.querySelector("#header");
     header.innerHTML = await fetchHtmlAsText("/header.html");
 
-    const naviBtn = document.querySelector("header > .hamburger_btn");
+    // header open & close
+    const body = document.querySelector("body");
+    const headerOpen = document.querySelector("header > .hamburger_btn");
+    const headerClose = document.querySelector("header > .bg ");
     const menu = document.querySelector("header > .menu ");
 
-    naviBtn.addEventListener('click', () => {
-        header.classList.toggle('active');
+    const toggleHeader = (btn) => {
+        btn.addEventListener('click', () => {
+            body.classList.toggle('fixing');
+            headerOpen.classList.toggle('active');
+            headerClose.classList.toggle('over');
+            menu.classList.toggle('on');
+        });
+    };
+
+    const headerBtn = [headerOpen, headerClose];
+    headerBtn.forEach((btn) => toggleHeader(btn));
+
+    // header close
+    headerBg.addEventListener('click', () => {
+        body.classList.toggle('fixing');
+        headerBg.classList.toggle('over');
         naviBtn.classList.toggle('active');
         menu.classList.toggle('on');
     });

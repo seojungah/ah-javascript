@@ -1,0 +1,48 @@
+/* ===================================
+         background color
+==================================== */
+
+header > .menu > .search > input {
+  background-color: transparent;
+}
+
+header > .hamburger_btn > .navi_line {
+  background-color: #fff;
+}
+
+header > .hamburger_btn:hover > .navi_line {
+  background-color: rgba(225, 225, 225, 0.5);
+}
+
+footer > .icon > div > a > p {
+  background: #222222;
+}
+
+header > .bg.over,
+header > .menu,
+header > .menu > div > h1:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* ===================================
+             font color
+==================================== */
+
+header > .menu,
+#main > .info,
+footer > .icon > div > a > p,
+header > .menu > .search > input {
+  color: #fff;
+}
+
+/* ===================================
+              border
+==================================== */
+
+footer > .icon > div > a > p:after {
+  border-bottom-color: #222222;
+}
+
+:root {
+  --swiper-theme-color: #fff !important;
+}
