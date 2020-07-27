@@ -1,4 +1,17 @@
 
+
+/**--------------
+    progress
+----------------*/
+
+const makeIndexTag = ["header", "main", "section", "footer"];
+makeIndexTag.forEach((value) => { loadByHtml(value); });
+const section = document.querySelector("#section");
+
+const main = document.createElement('main');
+section.appendChild(main);
+main.setAttribute("id", 'skill');
+
 /**--------------
        css
 ----------------*/
@@ -22,23 +35,26 @@ const loadIndexPage = async () => {
     const main = document.querySelector("#main");
     main.innerHTML = await fetchHtmlAsText("./main.html");
 
+
+    const swiper = document.querySelector("#swiper");
+    swiper.type = 'module';
+    swiper.innerHTML = `
+    import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+    const swiper = new Swiper('.swiper-container', {
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: true,
+        },
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+          },
+
+    });
+    `;
 };
 
 loadIndexPage();
 
-
-// const width = window.innerWidth;
-// const getCurrentScroll = () => {
-//     return window.pageYOffset || document.documentElement.scrollTop;
-// };
-// const getScroll = getCurrentScroll();
-// if (width > 1000) {
-//     if (getScroll >= 400) { }
-//     if (getScroll >= 1450) { }
-// }
-
-
-/**--------------
-    progress
-----------------*/
 

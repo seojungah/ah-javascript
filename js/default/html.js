@@ -1,3 +1,4 @@
+
 /**--------------
      loading
 ----------------*/
@@ -8,11 +9,22 @@ document.onreadystatechange = function () {
     if (state == 'interactive') {
     } else if (state == 'complete') {
         setTimeout(function () {
-            document.getElementById('interactive');
-            document.getElementById('load').style.visibility = "hidden";
+            document.querySelector('#interactive');
+            document.querySelector('#loading').style.visibility = "hidden";
         }, 1000);
     }
 };
+
+
+
+/**----------------
+      security
+------------------*/
+
+window.document.oncontextmenu = () => ("return false");
+window.document.onselectstart = () => ("return false");
+window.document.ondragstart = () => ("return false");
+
 
 
 /**--------------
@@ -25,6 +37,11 @@ const fetchHtmlAsText = async (url) => {
 };
 
 
+const loadByHtml = (element) => {
+    const tag = document.createElement(element);
+    document.body.appendChild(tag);
+    tag.setAttribute("id", element);
+};
 
 /**--------------
        css
@@ -86,6 +103,7 @@ const faviconMeta = [
 ];
 
 faviconMeta.forEach((value, content) => (makeFaviconMeta({ ...value })));
+
 
 
 

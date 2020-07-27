@@ -35,7 +35,8 @@ header > .menu {
 header > .menu > div {
   display: flex;
   flex-direction: column;
-  margin-top: 20vh;
+  margin-top: 50%;
+  transform: translate(0, -50%);
 }
 
 header > .menu > div > h1 {
@@ -44,7 +45,8 @@ header > .menu > div > h1 {
   width: 100%;
   margin: 0;
   padding: 3rem 0;
-  font-weight: 300;
+  font-size: 1.2rem;
+  font-weight: lighter;
 }
 
 header > .menu > div > h1::before {
@@ -79,7 +81,7 @@ header > .hamburger_btn {
   position: absolute;
   width: 2rem;
   height: 2rem;
-  top: 4vh;
+  top: 48vh;
   left: 2vw;
   z-index: 21;
   transition: 0.5s ease-out;
@@ -130,16 +132,16 @@ header > .hamburger_btn.active {
 }
 header > .hamburger_btn.active > #line1 {
   transform: rotate(45deg);
-  top: 31%;
-  left: 5%;
+  top: 0.65rem;
+  left: 0.15rem;
 }
 header > .hamburger_btn.active > #line2 {
   transform: rotate(-45deg);
 }
 header > .hamburger_btn.active > #line3 {
   transform: rotate(45deg);
-  bottom: 23%;
-  right: 6%;
+  bottom: 0.4rem;
+  right: 0.1rem;
 }
 
 /* ===================================
@@ -149,13 +151,11 @@ header > .hamburger_btn.active > #line3 {
 header > .menu > .search {
   display: block;
   position: relative;
-  margin: auto;
   margin-top: 2.5rem;
-  margin-left: 2rem;
+  text-align: center;
 }
 
 header > .menu > .search > input {
-  display: inline-block;
   width: 50%;
   height: 3.5vh;
   border: 0.1rem solid #fff;
