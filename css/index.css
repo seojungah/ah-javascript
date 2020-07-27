@@ -3,12 +3,15 @@
 ==================================== */
 
 #main {
-  position: relative;
+  position: fixed;
+  width: 40vw;
+  height: 100vh;
+  margin-left: 5vw;
 }
 
 .swiper-container {
   width: 100%;
-  height: 80vh;
+  height: auto;
 }
 
 #main > .info {
@@ -35,9 +38,21 @@
   font-size: 3rem;
 }
 
+section {
+  position: absolute;
+  width: 55vw;
+  top: 0;
+  right: 0;
+}
+
 /* ===================================
                  Skill
 ==================================== */
+
+#skill {
+  display: block;
+  position: relative;
+}
 
 #skill h1 {
   margin-left: 6%;

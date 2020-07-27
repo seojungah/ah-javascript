@@ -17,13 +17,8 @@ const loadHeader = async () => {
     const toggleHeader = (btn) => {
         btn.addEventListener('click', () => {
             headerOpen.classList.toggle('active');
-            menu.classList.toggle('sliding');
-
-            document.querySelector("#main").classList.toggle('fixing');
-            document.querySelector("#skill").classList.toggle('fixing');
-            document.querySelector("#footer").classList.toggle('fixing');
             headerClose.classList.toggle('show');
-            header.classList.toggle('main');
+            menu.classList.toggle('sliding');
         });
     };
 
@@ -61,9 +56,14 @@ const loadHeader = async () => {
         });
     };
 
-    const aTag = document.querySelectorAll('#menu h1');
-    const hearderMenu = [...aTag];
+    const pointer = document.querySelectorAll('.pointer');
+    const hearderMenu = [...pointer];
     hearderMenu.forEach((value, index) => { moveEvent(value, '#main'); });
+
+    const pallet = document.querySelector('#pallet');
+    pallet.addEventListener('click', () => {
+        location.href = "/pallet.html";
+    });
 };
 
 loadHeader();

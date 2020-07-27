@@ -5,10 +5,9 @@
 
 
 const loadProgress = async () => {
-
     // skill
     const skill = document.querySelector("#skill");
-    skill.innerHTML = await fetchHtmlAsText("./skill.html");
+    if (document.querySelector("#skill")) skill.innerHTML = await fetchHtmlAsText("./skill.html");
 
     const svgLoad = [
         { select: ".pro_90", percent: '90%', front: "M6,48A44,44,0,0,1,92,34.83" },
