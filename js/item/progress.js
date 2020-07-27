@@ -1,10 +1,4 @@
-/**--------------
-    progress
-----------------*/
-
-
-
-const loadProgress = async () => {
+const makeProgressSvg = async () => {
     // skill
     const skill = document.querySelector("#skill");
     if (document.querySelector("#skill")) skill.innerHTML = await fetchHtmlAsText("./skill.html");
@@ -38,4 +32,4 @@ const loadProgress = async () => {
 };
 
 
-loadProgress();
+makeProgressSvg();

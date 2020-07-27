@@ -37,10 +37,10 @@ const fetchHtmlAsText = async (url) => {
 };
 
 
-const loadByHtml = (element) => {
-    const tag = document.createElement(element);
+const loadByHtml = ({ tagType, id }) => {
+    const tag = document.createElement(tagType);
     document.body.appendChild(tag);
-    tag.setAttribute("id", element);
+    tag.setAttribute("id", id);
 };
 
 /**--------------
