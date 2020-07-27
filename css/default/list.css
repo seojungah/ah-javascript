@@ -1,0 +1,13 @@
+#list > div {
+  display: block;
+  border: 1px solid #eee;
+}
+
+#list > div > .hidden {
+  display: none;
+  transition: 0.5s linear;
+}
+
+.list_toggle {
+  display: block;
+}

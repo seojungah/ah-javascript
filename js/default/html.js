@@ -63,6 +63,7 @@ const cssList = [
     { rel: 'stylesheet', href: './css/style/color.css' },
     { rel: 'stylesheet', href: './css/default/footer.css' },
     { rel: 'stylesheet', href: './css/default/header.css' },
+    { rel: 'stylesheet', href: './css/default/list.css' },
     { rel: 'stylesheet', href: './css/default/progress.css' },
 ];
 

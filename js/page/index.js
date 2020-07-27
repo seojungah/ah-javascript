@@ -13,9 +13,14 @@ makeIndexTag.forEach((value) => { loadByHtml(value); });
 
 //section inside
 const section = document.querySelector("#section");
-const main = document.createElement('main');
-section.appendChild(main);
-main.setAttribute("id", 'skill');
+const sectionItem = ['list', 'skill'];
+
+sectionItem.forEach((value) => {
+    const item = document.createElement('div');
+    section.appendChild(item);
+    item.setAttribute("id", value);
+});
+
 
 /**--------------------
       load script
@@ -24,6 +29,7 @@ main.setAttribute("id", 'skill');
 const makeIndexScript = [
     { tagType: "script", id: "header_js", file: "default/header" },
     { tagType: "script", id: "footer_js", file: "default/footer" },
+    { tagType: "script", id: "list_js", file: "item/list" },
     { tagType: "script", id: "progress_js", file: "item/progress" },
     { tagType: "script", id: "scroll_js", file: "item/scroll" },
     { tagType: "script", id: "swiper_js", file: "" },
@@ -81,16 +87,3 @@ const cssListIndex = [
 ];
 
 cssListIndex.forEach((value, index) => (makeFaviconLink({ ...value })));
-
-
-
-
-// //script inside
-// const headerJs = document.querySelector("#header_js");
-// headerJs.src = 'js/default/header.js';
-// const footerJs = document.querySelector("#footer_js");
-// headerJs.src = 'js/default/footer.js';
-// const progressJs = document.querySelector("#progress_js");
-// progressJs.src = 'js/item/progress.js';
-// const scrollJs = document.querySelector("#scroll_js");
-// scrollJs.src = 'js/item/progress.js';
