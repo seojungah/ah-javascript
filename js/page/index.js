@@ -33,7 +33,7 @@ makeIndexScript.forEach((value, index) => {
     loadByHtml(value);
     if (value.file !== "") {
         const js = document.querySelector(`#${value.id}`);
-        js.src = `js/${value.file}.js`;
+        js.src = `/js/${value.file}.js`;
     }
 });
 
@@ -45,7 +45,7 @@ makeIndexScript.forEach((value, index) => {
 const loadIndexPage = async () => {
     // main
     const main = document.querySelector("#main");
-    main.innerHTML = await fetchHtmlAsText("./main.html");
+    main.innerHTML = await fetchHtmlAsText("/main.html");
 
     const swiper = document.querySelector("#swiper_js");
     swiper.type = 'module';
@@ -74,8 +74,8 @@ loadIndexPage();
 ----------------*/
 
 const cssListIndex = [
-    { rel: 'stylesheet', href: './css/page/index.css' },
-    { rel: 'stylesheet', href: './css/page/index_mobile.css' },
+    { rel: 'stylesheet', href: '/css/page/index.css' },
+    { rel: 'stylesheet', href: '/css/page/index_mobile.css' },
     { rel: 'stylesheet', href: 'https://unpkg.com/swiper/swiper-bundle.css' },
     { rel: 'stylesheet', href: 'https://unpkg.com/swiper/swiper-bundle.min.css' },
 ];
