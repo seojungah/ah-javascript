@@ -17,6 +17,7 @@ section {
   top: 0;
   left: 5vw;
   transition: 0.5s ease-out;
+  z-index: 3;
 }
 
 .swiper-container {
@@ -58,7 +59,7 @@ section {
   top: 50%;
   right: 0;
   transform: translate(0, -50%);
-  z-index: 1;
+  z-index: 4;
   transition: 0.5s ease-out;
 }
 
@@ -80,8 +81,8 @@ section.close {
 }
 
 #main > .close_btn.close {
-  right: 36.5vw;
-  transform: rotate(90deg);
+  right: -3vw;
+  transform: rotate(180deg);
 }
 
 /* ===================================

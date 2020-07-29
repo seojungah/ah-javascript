@@ -16,7 +16,8 @@ footer {
 
 footer > div {
   display: inline-flex;
-  flex-direction: row;
+  position: relative;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -64,6 +65,7 @@ footer > .icon > div > a > p:after {
   height: 0;
   margin-left: -0.5rem;
   border-width: 0.5rem;
+  z-index: 30;
 }
 
 footer > .icon > div > a:hover p {
