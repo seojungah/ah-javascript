@@ -19,7 +19,8 @@ footer > .icon > div > a > p {
   background: #222222;
 }
 
-header > .menu {
+header > .menu,
+section {
   background-color: #222222;
 }
 

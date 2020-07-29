@@ -6,8 +6,6 @@ header {
   display: block;
   position: fixed;
   box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
   top: 0;
   left: 0;
   z-index: 20;
@@ -142,6 +140,10 @@ header > .hamburger_btn.active > #line3 {
   transform: rotate(45deg);
   bottom: 0.4rem;
   right: 0.1rem;
+}
+
+textarea {
+  display: none;
 }
 
 /* ===================================

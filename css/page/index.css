@@ -1,3 +1,11 @@
+section {
+  position: absolute;
+  width: 50vw;
+  top: 0;
+  right: 5vw;
+  transition: 0.5s ease-out;
+}
+
 /* ===================================
                  Main
 ==================================== */
@@ -6,7 +14,9 @@
   position: fixed;
   width: 40vw;
   height: 100vh;
-  margin-left: 5vw;
+  top: 0;
+  left: 5vw;
+  transition: 0.5s ease-out;
 }
 
 .swiper-container {
@@ -42,11 +52,54 @@
   font-size: 3rem;
 }
 
-section {
+#main > .close_btn {
+  display: inline-block;
   position: absolute;
-  width: 50vw;
-  top: 0;
-  right: 5vw;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  z-index: 1;
+  transition: 0.5s ease-out;
+}
+
+#main > .close_btn > img {
+  width: 4rem;
+  height: 4rem;
+  opacity: 0.6;
+}
+
+/*toggle*/
+
+#main.close {
+  left: -35vw;
+}
+
+section.close {
+  width: 90vw;
+  left: 5vw;
+}
+
+#main > .close_btn.close {
+  right: 36.5vw;
+  transform: rotate(90deg);
+}
+
+/* ===================================
+                 list
+==================================== */
+
+#list > div {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  transition: 0.5s linear;
+}
+
+#list > .list_btn > .hidden {
+  display: none;
+}
+
+.unfold {
+  display: block;
 }
 
 /* ===================================

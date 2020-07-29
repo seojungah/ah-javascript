@@ -59,18 +59,28 @@ const loadIndexPage = async () => {
     swiper.innerHTML = `
     import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
     const swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        // loop: true,
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     type: 'progressbar',
+        //   },
         autoplay: {
             delay: 2500,
             disableOnInteraction: true,
         },
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'progressbar',
-          },
-
     });
     `;
+
+    const closeBtn = document.querySelector(".close_btn");
+    const section = document.querySelector("section");
+
+    closeBtn.addEventListener('click', () => {
+        main.classList.toggle('close');
+        closeBtn.classList.toggle('close');
+        section.classList.toggle('close');
+    });
+
 };
 
 loadIndexPage();

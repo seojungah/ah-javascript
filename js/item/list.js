@@ -9,8 +9,7 @@ const makeList = async () => {
     listBtn.forEach((value, index) => {
         const hiddenPage = document.querySelector(`#list_${index + 1}`);
         value.addEventListener('click', () => {
-            console.log(hiddenPage);
-            hiddenPage.style.display = 'block';
+            hiddenPage.classList.toggle('unfold');
         });
     });
 };
