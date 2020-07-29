@@ -56,21 +56,38 @@ const loadIndexPage = async () => {
 
     const swiper = document.querySelector("#swiper_js");
     swiper.type = 'module';
-    swiper.innerHTML = `
-    import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
-    const swiper = new Swiper('.swiper-container', {
-        direction: 'horizontal',
-        // loop: true,
-        // pagination: {
-        //     el: '.swiper-pagination',
-        //     type: 'progressbar',
-        //   },
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: true,
-        },
-    });
-    `;
+    swiper.innerHTML =
+        `import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+        //main
+        new Swiper('.swiper-main', {
+            direction: 'horizontal',
+            loop: true,
+            // pagination: {
+            //     el: '.swiper-pagination',
+            //     type: 'progressbar',
+            //   },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: true,
+            },
+        });
+        //list
+        new Swiper('.swiper-list', {
+            direction: 'horizontal',
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                // type: 'progressbar',
+                clickable: true,
+            },
+            // loop: true,
+            // autoplay: {
+            //     delay: 2500,
+            //     disableOnInteraction: true,
+            // },
+        });`
+        ;
 
     const closeBtn = document.querySelector(".close_btn");
     const section = document.querySelector("section");

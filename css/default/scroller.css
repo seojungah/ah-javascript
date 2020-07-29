@@ -1,0 +1,30 @@
+/* ===================================
+    vetical & horizontal scroll
+==================================== */
+/*scroll all*/
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+/*top,bottom button*/
+::-webkit-scrollbar-button {
+  /*:start,:end */
+  width: 0;
+  height: 0;
+}
+
+/*scroll bar*/
+::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+  background-clip: padding-box;
+  border: 0.1vw solid transparent;
+}
+
+/* 
+::-webkit-scrollbar-track {scroll track - bg}
+::-webkit-scrollbar-track-piece {Except scroll bar}
+::-webkit-scrollbar-corner {}
+::-webkit-resizer {} 
+::-webkit-scrollbar-button:vertical:increment {}
+::-webkit-scrollbar-button:vertical:decrement {} 
+*/

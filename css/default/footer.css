@@ -6,6 +6,7 @@ footer {
   display: flex;
   position: fixed;
   flex-direction: column;
+  align-items: center;
   width: 5vw;
   height: 100vh;
   background-color: purple;
@@ -15,23 +16,21 @@ footer {
 }
 
 footer > div {
-  display: inline-flex;
+  display: flex;
   position: relative;
   flex-direction: column;
   justify-content: space-between;
 }
 
 footer > .icon {
-  position: absolute;
-  top: 2rem;
-  right: 3rem;
 }
 
 footer > .icon > div {
   font-size: 1.7rem;
+  margin: 5rem auto;
 }
 
-footer a {
+footer > .icon > div > a {
   position: relative;
 }
 

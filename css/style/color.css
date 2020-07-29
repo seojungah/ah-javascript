@@ -6,7 +6,8 @@ header > .menu > .search > input {
   background-color: transparent;
 }
 
-header > .hamburger_btn > .navi_line {
+header > .hamburger_btn > .navi_line,
+::-webkit-scrollbar-thumb {
   background-color: #fff;
 }
 
@@ -15,17 +16,20 @@ header > .hamburger_btn:hover > .navi_line {
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
-footer > .icon > div > a > p {
-  background: #222222;
-}
-
+body,
 header > .menu,
-section {
+footer > .icon > div > a > p {
   background-color: #222222;
 }
 
 header > .menu > div > h1:hover {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer,
+::-webkit-scrollbar-track,
+::-webkit-resizer {
+  background-color: purple;
 }
 
 /* ===================================

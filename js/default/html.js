@@ -61,6 +61,7 @@ const cssList = [
     { rel: 'stylesheet', href: './css/style/reset.css' },
     { rel: 'stylesheet', href: './css/style/font.css' },
     { rel: 'stylesheet', href: './css/style/color.css' },
+    { rel: 'stylesheet', href: './css/default/scroller.css' },
     { rel: 'stylesheet', href: './css/default/footer.css' },
     { rel: 'stylesheet', href: './css/default/header.css' },
     { rel: 'stylesheet', href: './css/default/progress.css' },

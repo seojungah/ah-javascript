@@ -71,13 +71,13 @@ section {
 
 /*toggle*/
 
-#main.close {
-  left: -35vw;
-}
-
 section.close {
   width: 90vw;
   left: 5vw;
+}
+
+#main.close {
+  left: -35vw;
 }
 
 #main > .close_btn.close {
@@ -89,15 +89,33 @@ section.close {
                  list
 ==================================== */
 
-#list > div {
-  display: block;
-  border: 1px solid rgba(0, 0, 0, 0.6);
-  transition: 0.5s linear;
+.swiper-slide {
+  width: fit-content !important;
 }
 
-#list > .list_btn > .hidden {
-  display: none;
+#list {
+  width: 100%;
 }
+
+#list .box {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  transition: 0.5s linear;
+  width: 43%;
+}
+
+#list .box > .title {
+  text-align: center;
+}
+
+/* #list .box > img {
+} */
+
+/* 
+#list > .box > .hidden {
+  display: none;
+} */
 
 .unfold {
   display: block;
