@@ -27,19 +27,20 @@ sectionItem.forEach((value) => {
 ----------------------*/
 
 const makeIndexScript = [
-    { tagType: "script", id: "header_js", file: "default/header" },
-    { tagType: "script", id: "footer_js", file: "default/footer" },
-    { tagType: "script", id: "list_js", file: "item/list" },
-    { tagType: "script", id: "progress_js", file: "item/progress" },
-    { tagType: "script", id: "scroll_js", file: "item/scroll" },
+    { tagType: "script", id: "header_js", file: "/js/default/header" },
+    { tagType: "script", id: "footer_js", file: "/js/default/footer" },
+    { tagType: "script", id: "list_js", file: "/js/item/list" },
+    { tagType: "script", id: "progress_js", file: "/js/item/progress" },
+    { tagType: "script", id: "scroll_js", file: "/js/item/scroll" },
     { tagType: "script", id: "swiper_js", file: "" },
+    { tagType: "script", id: "sweetalert_js", file: "https://unpkg.com/sweetalert/dist/sweetalert.min" },
 ];
 
 makeIndexScript.forEach((value, index) => {
     loadByHtml(value);
     if (value.file !== "") {
         const js = document.querySelector(`#${value.id}`);
-        js.src = `/js/${value.file}.js`;
+        js.src = `${value.file}.js`;
     }
 });
 

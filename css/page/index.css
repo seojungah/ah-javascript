@@ -44,9 +44,9 @@
 
 section {
   position: absolute;
-  width: 55vw;
+  width: 50vw;
   top: 0;
-  right: 0;
+  right: 5vw;
 }
 
 /* ===================================

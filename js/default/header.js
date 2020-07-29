@@ -64,6 +64,29 @@ const loadHeader = async () => {
     pallet.addEventListener('click', () => {
         location.href = "/pallet.html";
     });
+
+    //Clipboard - sweetalert.js
+    const textArea = document.createElement('textarea');
+    textArea.value = 'sjungah99@gmail.com';
+    document.body.appendChild(textArea);
+
+    const contect = document.querySelector("#contect");
+    contect.addEventListener('click', () => {
+        try {
+            textArea.select();
+            const copy = document.execCommand('copy');
+            if (copy) swal({
+                title: "복사 완료",
+                text: "sjungah99@gmail.com",
+                icon: "success",
+                button: "OK",
+            });
+            document.body.removeChild(textArea);
+        } catch (err) {
+            console.log('Unable to copy');
+        }
+    });
+
 };
 
 loadHeader();
