@@ -26,7 +26,6 @@ header > .menu {
   width: 45vw;
   height: 100vh;
   left: -40vw;
-  backdrop-filter: blur(20px);
   transition: 0.5s ease-out;
 }
 
@@ -180,6 +179,7 @@ header > .menu > .search > input:focus {
     top: -95vh;
     left: 0;
     transition: 0.3s linear;
+    backdrop-filter: blur(20px);
   }
 
   header > .menu.sliding {
@@ -194,22 +194,25 @@ header > .menu > .search > input:focus {
     left: 50vw;
   }
 
+  /* ////////// */
+
   header > .hamburger_btn > .navi_line {
     height: 0.15rem;
   }
 
   /*  hamburger button Active */
   header > .hamburger_btn.active {
-    left: 21.5rem;
+    top: 2rem;
+    left: 90vw;
   }
 
   header > .hamburger_btn.active > #line1 {
-    top: 35%;
+    top: 31%;
     left: 5%;
   }
 
   header > .hamburger_btn.active > #line3 {
-    bottom: 20%;
-    right: 10%;
+    bottom: 18%;
+    right: 8%;
   }
 }
