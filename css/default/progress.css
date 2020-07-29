@@ -18,6 +18,13 @@
 .progress > div > svg {
   width: 10rem;
 }
+.progress > div > p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #ad50ff;
+}
 
 .progress > div > .front {
   position: absolute;
@@ -29,7 +36,7 @@
 .progress > div > .back > path {
   fill: none;
   stroke-width: 0.3rem;
-  stroke: #ece2f7;
+  stroke: rgba(0, 0, 0, 0.3);
 }
 
 .progress > div > .front > path {

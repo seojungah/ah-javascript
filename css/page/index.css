@@ -89,12 +89,13 @@ section.close {
                  list
 ==================================== */
 
-.swiper-slide {
-  width: fit-content !important;
-}
-
 #list {
   width: 100%;
+}
+
+#list .swiper-slide {
+  width: fit-content !important;
+  margin: 1rem 0.5rem !important;
 }
 
 #list .box {
@@ -102,15 +103,19 @@ section.close {
   box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.6);
   transition: 0.5s linear;
-  width: 43%;
+  width: fit-content;
 }
 
 #list .box > .title {
+  position: absolute;
   text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-/* #list .box > img {
-} */
+#list .box > img {
+}
 
 /* 
 #list > .box > .hidden {
@@ -142,4 +147,28 @@ section.close {
   justify-content: space-around;
   flex-wrap: nowrap;
   width: 100%;
+}
+
+#skill > .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+#skill > .main.title {
+  margin-top: 1rem;
+}
+
+#skill > .main.title > h2 {
+  width: 25%;
+  text-align: center;
+}
+
+#skill > .sub.title > p {
+  width: 25%;
+  text-align: center;
+  margin: 0;
+  opacity: 0.4;
 }

@@ -29,7 +29,7 @@ header > .menu > div > h1:hover {
 footer,
 ::-webkit-scrollbar-track,
 ::-webkit-resizer {
-  background-color: purple;
+  background-color: #111111;
 }
 
 /* ===================================

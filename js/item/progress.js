@@ -17,13 +17,13 @@ const makeProgressSvg = async () => {
         a.forEach((value) => {
             value.innerHTML =
                 '<div>' +
-                '<svg svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50"  class="front" >' +
-                `<path d=${front}></path> ` +
-                '</svg>' +
-                '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" class="back">' +
-                ' <path d="M6,48a44,44,0,0,1,88,0"></path>' +
-                '</svg>' +
-                `<p>${percent}</p>` +
+                '   <svg svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50"  class="front" >' +
+                `       <path d=${front}></path> ` +
+                '   </svg>' +
+                '   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" class="back">' +
+                '       <path d="M6,48a44,44,0,0,1,88,0"></path>' +
+                '   </svg>' +
+                `   <p>${percent}</p>` +
                 ' </div>';
         });
     };

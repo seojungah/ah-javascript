@@ -80,7 +80,7 @@ header > .hamburger_btn {
   width: 2rem;
   height: 2rem;
   top: 48vh;
-  left: 2vw;
+  left: 2rem;
   z-index: 21;
   transition: 0.5s ease-out;
 }
@@ -175,19 +175,23 @@ header > .menu > .search > input:focus {
 
 @media (max-width: 768px) {
   header > .menu {
-    width: 80vw;
+    width: 100vw;
     height: 100vh;
-    left: -80vh;
+    top: -95vh;
+    left: 0;
     transition: 0.3s linear;
   }
 
-  /*  hamburger button  */
+  header > .menu.sliding {
+    top: 0;
+  }
 
+  /*  hamburger button  */
   header > .hamburger_btn {
-    width: 1.5rem;
-    height: 1.5rem;
-    top: 2rem;
-    left: 2rem;
+    width: 1rem;
+    height: 1rem;
+    top: 0.5rem;
+    left: 50vw;
   }
 
   header > .hamburger_btn > .navi_line {

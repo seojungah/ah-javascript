@@ -1,54 +1,50 @@
 @media (max-width: 768px) {
+  section {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    top: unset;
+    right: 0;
+  }
+
   /* ===================================
                  Main
-==================================== */
+  ==================================== */
 
   #main {
-    width: 100%;
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    margin-top: 5vh;
+    top: unset;
+    left: 0;
   }
 
   .swiper-container {
     height: 60vh;
-    width: 100%;
   }
 
-  #main > .info {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    top: 55%;
-    left: 10%;
-    mix-blend-mode: overlay;
+  #main > .close_btn {
+    display: none;
   }
 
-  #main > .info > p {
-    margin: 1rem auto;
-    width: 30em;
-  }
-  #main > .info > h1 {
-    margin: 0;
+  /* ===================================
+                 list
+  ==================================== */
+
+  .swiper-list {
+    height: 60vw !important;
   }
 
-  #main > .info > h1 > span {
-    display: block;
-    margin: 1rem 0;
-    font-size: 1.8rem;
+  #list .box > img {
+    width: 60vw;
   }
 
-  :root {
-    --swiper-navigation-size: 1.8rem !important;
+  #list .box > .title {
+    width: 60vw;
   }
 
   /* ===================================
                  Skill
   ==================================== */
-
-  #skill h1 {
-    margin: 10% auto !important;
-  }
-
-  #skill > .progress {
-    flex-wrap: wrap;
-    width: 95%;
-  }
 }

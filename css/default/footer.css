@@ -7,9 +7,8 @@ footer {
   position: fixed;
   flex-direction: column;
   align-items: center;
-  width: 5vw;
+  width: 3vw;
   height: 100vh;
-  background-color: purple;
   top: 0;
   right: 0;
   z-index: 20;
@@ -23,11 +22,14 @@ footer > div {
 }
 
 footer > .icon {
+  opacity: 0.4;
+  margin-top: 70vh;
+  height: 30vh;
 }
 
 footer > .icon > div {
   font-size: 1.7rem;
-  margin: 5rem auto;
+  margin: 2rem auto;
 }
 
 footer > .icon > div > a {
@@ -35,7 +37,7 @@ footer > .icon > div > a {
 }
 
 footer > .icon > div > a > img {
-  width: 2rem;
+  width: 1.7rem;
 }
 
 footer > .icon > div > a > p {
@@ -69,4 +71,14 @@ footer > .icon > div > a > p:after {
 
 footer > .icon > div > a:hover p {
   display: block;
+}
+
+/* ===================================
+                MOBILE
+==================================== */
+
+@media (max-width: 768px) {
+  footer {
+    display: none;
+  }
 }
