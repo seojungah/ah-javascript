@@ -20,7 +20,7 @@
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
-## 💾 git
+## 💾 github
 
 ```bash
 $ git clone https://github.com/seojungah/seojungah.github.io.git
