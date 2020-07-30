@@ -104,7 +104,7 @@ section.close {
 #list .box {
   position: relative;
   box-sizing: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.6);
+/*   border: 1px solid rgba(0, 0, 0, 0.6); */
   transition: 0.5s linear;
   width: fit-content;
 }
