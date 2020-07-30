@@ -81,11 +81,6 @@ const loadIndexPage = async () => {
                 // type: 'progressbar',
                 clickable: true,
             },
-            // loop: true,
-            // autoplay: {
-            //     delay: 2500,
-            //     disableOnInteraction: true,
-            // },
         });`
         ;
 
