@@ -1,8 +1,8 @@
 section {
   position: absolute;
-  width: 50vw;
+  width: 52vw;
   top: 0;
-  right: 5vw;
+  right: 3vw;
   transition: 0.5s ease-out;
 }
 
