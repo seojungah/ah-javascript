@@ -6,6 +6,9 @@ header > .menu > .search > input {
   background-color: transparent;
 }
 
+body,
+header > .menu,
+footer > .icon > div > a > p,
 header > .hamburger_btn > .navi_line,
 ::-webkit-scrollbar-thumb {
   background-color: #fff;
@@ -14,12 +17,6 @@ header > .hamburger_btn > .navi_line,
 .swiper-pagination-progressbar,
 header > .hamburger_btn:hover > .navi_line {
   background-color: rgba(255, 255, 255, 0.3) !important;
-}
-
-body,
-header > .menu,
-footer > .icon > div > a > p {
-  background-color: #222222;
 }
 
 header > .menu > div > h1:hover {
