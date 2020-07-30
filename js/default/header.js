@@ -4,16 +4,19 @@
 
 const loadHeader = async () => {
 
-    // header
+    // import html elegment
     const header = document.querySelector("#header");
-    header.innerHTML = await fetchHtmlAsText("/header.html");
-
-    // header open & close
     const headerOpen = document.querySelector("header > .hamburger_btn");
     const headerClose = document.querySelector("header > .bg ");
-
     const menu = document.querySelector("header > .menu");
-
+    const search = document.querySelector(".menu .search input");
+    const pallet = document.querySelector('#pallet');   
+    const contect = document.querySelector("#contect");      
+     
+    // import header      
+    header.innerHTML = await fetchHtmlAsText("/header.html");
+      
+    // header open & close
     const toggleHeader = (btn) => {
         btn.addEventListener('click', () => {
             headerOpen.classList.toggle('active');
@@ -21,16 +24,11 @@ const loadHeader = async () => {
             menu.classList.toggle('sliding');
         });
     };
-
     const headerBtn = [headerOpen, headerClose];
     headerBtn.forEach((btn) => toggleHeader(btn));
-
-
-    // search
-    const search = document.querySelector(".menu .search input");
-
+  
+    // search bar
     search.addEventListener('keyup', () => {
-
         const main = document.querySelector('#main');
         main.style.display = 'none';
 
@@ -42,9 +40,7 @@ const loadHeader = async () => {
             const searchNum = tagUpperCase.indexOf(inputValue);
             if (searchNum > -1) return tag;
         });
-
-        searchTag.forEach((tag) => tag.parentNode.style.display = '');
-
+          searchTag.forEach((tag) => tag.parentNode.style.display = '');
     });
 
     // header menu click event 
@@ -60,17 +56,15 @@ const loadHeader = async () => {
     const hearderMenu = [...pointer];
     hearderMenu.forEach((value, index) => { moveEvent(value, '#main'); });
 
-    const pallet = document.querySelector('#pallet');
     pallet.addEventListener('click', () => {
         location.href = "/pallet.html";
     });
 
-    //Clipboard - sweetalert.js
+    //Clipboard - sweetalert.js -> alert
     const textArea = document.createElement('textarea');
     textArea.value = 'sjungah99@gmail.com';
     document.body.appendChild(textArea);
 
-    const contect = document.querySelector("#contect");
     contect.addEventListener('click', () => {
         try {
             textArea.select();
