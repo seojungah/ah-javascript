@@ -22,7 +22,6 @@ footer > div {
 }
 
 footer > .icon {
-  opacity: 0.4;
   margin-top: 70vh;
   height: 30vh;
 }
@@ -38,6 +37,11 @@ footer > .icon > div > a {
 
 footer > .icon > div > a > img {
   width: 1.7rem;
+    opacity: 0.4;
+}
+
+footer > .icon > div > a > img:hover{
+    opacity: 1;
 }
 
 footer > .icon > div > a > p {
