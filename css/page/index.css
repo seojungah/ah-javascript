@@ -16,11 +16,11 @@ section {
   height: 100vh;
   top: 0;
   left: 5vw;
-  transition: 0.5s ease-out;
   z-index: 3;
+    transition: 0.5s ease-out;
 }
 
-.swiper-container {
+/* .swiper-container {
   width: 100%;
   height: auto;
 }
@@ -28,6 +28,7 @@ section {
 .swiper-pagination {
   top: 99.5vh !important;
 }
+ */
 
 #main > .info {
   display: block;
@@ -74,10 +75,12 @@ section {
 section.close {
   width: 90vw;
   left: 5vw;
+  transition: 0.5s ease-out;
 }
 
 #main.close {
   left: -35vw;
+  transition: 0.5s ease-out;
 }
 
 #main > .close_btn.close {
