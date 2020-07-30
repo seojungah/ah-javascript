@@ -15,7 +15,7 @@ header > .hamburger_btn > .navi_line,
 }
 
 body{
-    background-color: #eee;       
+    background-color: #f4f4f4;       
 }
 
 .swiper-pagination-progressbar,
@@ -52,7 +52,7 @@ header > .menu,
 #main > .info,
 footer > .icon > div > a > p,
 header > .menu > .search > input {
-  color: #fff;
+  color: #242424;
 }
 
 /* ===================================
