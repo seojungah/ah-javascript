@@ -6,12 +6,16 @@ header > .menu > .search > input {
   background-color: transparent;
 }
 
-body,
-header > .menu,
+
+
 footer > .icon > div > a > p,
 header > .hamburger_btn > .navi_line,
 ::-webkit-scrollbar-thumb {
   background-color: #fff;
+}
+
+body{
+    background-color: #eee;       
 }
 
 .swiper-pagination-progressbar,
@@ -21,6 +25,10 @@ header > .hamburger_btn:hover > .navi_line {
 
 header > .menu > div > h1:hover {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+header > .menu{
+      background-color: #222222;     
 }
 
 footer,
