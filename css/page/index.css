@@ -33,7 +33,7 @@ section {
 #main > .info {
   display: block;
   position: absolute;
-  mix-blend-mode: overlay;
+/*   mix-blend-mode: overlay; */
   z-index: 1;
   top: 50%;
   left: 20%;
