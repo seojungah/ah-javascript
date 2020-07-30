@@ -1,16 +1,15 @@
 # Jungah Seo
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-## 🔗 SITE
+### 🔗 SITE
 * [Go to Portfolio site](https://seojungah.github.io/)
 * [Style Pallet](https://seojungah.github.io/style.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
-## 👩‍💻 Programming Languages
+##  Programming Languages
 
 * __html__ - 최소한으로 사용 / 도큐먼트화
-* __css__ - 레이아웃 & 애니메이션 제작
-* __javascript__ - 콘텐츠 생성 후 연결 / 인터렉션 이벤트
+* __css__ - 레이아웃 스타일 및 애니메이션
+* __javascript__ - 콘텐츠 생성과 연결 / 인터렉션
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ## 🌏 Browser Support
