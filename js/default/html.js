@@ -15,13 +15,6 @@ document.onreadystatechange = function () {
     }
 };
 
-/**----------------
-      security
-------------------*/
-
-window.document.oncontextmenu = () => ("return false");
-window.document.onselectstart = () => ("return false");
-window.document.ondragstart = () => ("return false");
 
 /**--------------
        HTML
@@ -57,7 +50,6 @@ const cssList = [
     { rel: 'stylesheet', href: './css/style/font.css' },
     { rel: 'stylesheet', href: './css/style/color.css' },
     { rel: 'stylesheet', href: './css/default/scroller.css' },
-    { rel: 'stylesheet', href: './css/default/footer.css' },
     { rel: 'stylesheet', href: './css/default/header.css' },
     { rel: 'stylesheet', href: './css/default/progress.css' },
 ];
@@ -101,5 +93,19 @@ const faviconMeta = [
 faviconMeta.forEach((value, content) => (makeFaviconMeta({ ...value })));
 
 
+/**----------------
+      security
+------------------*/
+
+// window.document.oncontextmenu = () => ("return false");
+// window.document.onselectstart = () => ("return false");
+// window.document.ondragstart = () => ("return false");
+
+const body = document.querySelector('body');
+body.oncontextmenu = "lightClick()";
+
+const lightClick = () => {
+    swal("You right-clicked inside the div!");
+};
 
 

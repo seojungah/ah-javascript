@@ -1,9 +1,13 @@
 section {
   position: absolute;
-  width: 52vw;
+  width: 55vw;
   top: 0;
-  right: 3vw;
+  right: 0;
   transition: 0.5s ease-out;
+}
+
+section > div {
+  margin-top: 10rem;
 }
 
 /* ===================================
@@ -17,7 +21,7 @@ section {
   top: 0;
   left: 5vw;
   z-index: 3;
-    transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
 }
 
 /* .swiper-container {
@@ -33,7 +37,7 @@ section {
 #main > .info {
   display: block;
   position: absolute;
-/*   mix-blend-mode: overlay; */
+  /*   mix-blend-mode: overlay; */
   z-index: 1;
   top: 50%;
   left: 20%;
@@ -104,7 +108,7 @@ section.close {
 #list .box {
   position: relative;
   box-sizing: border-box;
-/*   border: 1px solid rgba(0, 0, 0, 0.6); */
+  /*   border: 1px solid rgba(0, 0, 0, 0.6); */
   transition: 0.5s linear;
   width: fit-content;
 }
@@ -118,6 +122,7 @@ section.close {
 }
 
 #list .box > img {
+  width: 22vw;
 }
 
 /* 
@@ -138,13 +143,7 @@ section.close {
   position: relative;
 }
 
-#skill h1 {
-  margin-left: 6%;
-  margin-bottom: 3%;
-  font-weight: 700;
-}
-
-#skill > .list {
+#skill > .progress_list {
   display: flex;
   flex-direction: row;
   justify-content: space-around;

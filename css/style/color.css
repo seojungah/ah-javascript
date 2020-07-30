@@ -6,20 +6,18 @@ header > .menu > .search > input {
   background-color: transparent;
 }
 
-footer > .icon > div > a > p,
-header > .hamburger_btn > .navi_line,
-::-webkit-scrollbar-thumb {
+header > .icon > div > a > p,
+header > .hamburger_btn > .navi_line {
   background-color: #fff;
 }
 
-body{
-    background-color: #f4f4f4;       
-}
-
-footer,
-#main,
+body,
 ::-webkit-scrollbar-track,
 ::-webkit-resizer {
+  background-color: #f4f4f4;
+}
+
+#main {
   background-color: #eee;
 }
 
@@ -28,14 +26,14 @@ header > .hamburger_btn:hover > .navi_line {
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
+header > .menu,
+::-webkit-scrollbar-thumb {
+  background-color: #222222;
+}
+
 header > .menu > div > h1:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
-
-header > .menu{
-      background-color: #222222;     
-}
-
 
 @media (max-width: 768px) {
   header > .menu {
@@ -48,14 +46,13 @@ header > .menu{
 ==================================== */
 
 section,
-
 #main > .info,
-footer > .icon > div > a > p,
+header > .icon > div > a > p,
 header > .menu > .search > input {
   color: #242424;
 }
 
-header > .menu,{
+header > .menu {
   color: #fff;
 }
 
@@ -63,7 +60,7 @@ header > .menu,{
               border
 ==================================== */
 
-footer > .icon > div > a > p:after {
+header > .icon > div > a > p:after {
   border-bottom-color: #222222;
 }
 

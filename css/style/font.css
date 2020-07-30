@@ -11,6 +11,12 @@
   font-family: "Noto Sans", sans-serif;
 }
 
+.section_title {
+  margin-left: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
 h1 {
   font-size: 1.6rem;
   font-weight: 800;

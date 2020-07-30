@@ -6,14 +6,13 @@ const makeIndexTag = [
     { tagType: "header", id: "header" },
     { tagType: "main", id: "main" },
     { tagType: "section", id: "section" },
-    { tagType: "footer", id: "footer" },
 ];
 
 makeIndexTag.forEach((value) => { loadByHtml(value); });
 
 //section inside
 const section = document.querySelector("#section");
-const sectionItem = ['list', 'skill'];
+const sectionItem = ['information', 'list', 'skill'];
 
 sectionItem.forEach((value) => {
     const item = document.createElement('div');
@@ -28,7 +27,6 @@ sectionItem.forEach((value) => {
 
 const makeIndexScript = [
     { tagType: "script", id: "header_js", file: "/js/default/header" },
-    { tagType: "script", id: "footer_js", file: "/js/default/footer" },
     { tagType: "script", id: "list_js", file: "/js/item/list" },
     { tagType: "script", id: "progress_js", file: "/js/item/progress" },
     { tagType: "script", id: "scroll_js", file: "/js/item/scroll" },
@@ -54,25 +52,25 @@ const loadIndexPage = async () => {
     const main = document.querySelector("#main");
     main.innerHTML = await fetchHtmlAsText("/main.html");
 
+    // information
+    const information = document.querySelector("#information");
+    information.innerHTML = await fetchHtmlAsText("/information.html");
+
     const swiper = document.querySelector("#swiper_js");
     swiper.type = 'module';
     swiper.innerHTML =
         `import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
         //main
-        new Swiper('.swiper-main', {
-            direction: 'horizontal',
-            loop: true,
-            // pagination: {
-            //     el: '.swiper-pagination',
-            //     type: 'progressbar',
-            //   },
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: true,
-            },
-	observer: true,
-		observeParents: true,
-        });
+        // new Swiper('.swiper-main', {
+        //     direction: 'horizontal',
+        //     loop: true,
+        //     autoplay: {
+        //         delay: 2500,
+        //         disableOnInteraction: true,
+        //     },
+	    // observer: true,
+		// observeParents: true,
+        // });
         //list
         new Swiper('.swiper-list', {
             direction: 'horizontal',

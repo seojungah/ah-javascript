@@ -169,6 +169,66 @@ header > .menu > .search > input:focus {
 }
 
 /* ===================================
+               icon
+==================================== */
+
+header > .icon {
+  margin-top: 70vh;
+  height: 30vh;
+}
+
+header > .icon > div {
+  font-size: 1.7rem;
+  margin: 2rem auto;
+}
+
+header > .icon > div > a {
+  position: relative;
+}
+
+header > .icon > div > a > img {
+  width: 1.7rem;
+  opacity: 0.4;
+}
+
+header > .icon > div > a > img:hover {
+  opacity: 1;
+}
+
+header > .icon > div > a > p {
+  display: none;
+  position: absolute;
+  text-align: center;
+  width: 4.5rem;
+  top: 140%;
+  left: -115%;
+  padding: 0.2rem 1rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+}
+
+header > .icon > div > a > p:after {
+  content: " ";
+  position: absolute;
+  border: solid transparent;
+  border-color: transparent;
+  pointer-events: none;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -0.5rem;
+  border-width: 0.5rem;
+  z-index: 30;
+}
+
+header > .icon > div > a:hover p {
+  display: block;
+}
+
+/* ===================================
                 MOBILE
 ==================================== */
 
