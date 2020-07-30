@@ -20,7 +20,7 @@
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
-## 💾 git 저장소 사용법
+## 💾 git
 
 ```bash
 $ git clone https://github.com/seojungah/seojungah.github.io.git
