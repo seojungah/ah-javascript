@@ -6,8 +6,6 @@ header > .menu > .search > input {
   background-color: transparent;
 }
 
-
-
 footer > .icon > div > a > p,
 header > .hamburger_btn > .navi_line,
 ::-webkit-scrollbar-thumb {
@@ -16,6 +14,13 @@ header > .hamburger_btn > .navi_line,
 
 body{
     background-color: #f4f4f4;       
+}
+
+footer,
+#main,
+::-webkit-scrollbar-track,
+::-webkit-resizer {
+  background-color: #eee;
 }
 
 .swiper-pagination-progressbar,
@@ -31,11 +36,6 @@ header > .menu{
       background-color: #222222;     
 }
 
-footer,
-::-webkit-scrollbar-track,
-::-webkit-resizer {
-  background-color: #eee;
-}
 
 @media (max-width: 768px) {
   header > .menu {
