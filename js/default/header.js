@@ -3,6 +3,10 @@
 ----------------*/
 
 const loadHeader = async () => {
+      
+          // import header      
+    header.innerHTML = await fetchHtmlAsText("/header.html");
+      
 
     // import html elegment
     const header = document.querySelector("#header");
@@ -13,9 +17,7 @@ const loadHeader = async () => {
     const pallet = document.querySelector('#pallet');   
     const contect = document.querySelector("#contect");      
      
-    // import header      
-    header.innerHTML = await fetchHtmlAsText("/header.html");
-      
+
     // header open & close
     const toggleHeader = (btn) => {
         btn.addEventListener('click', () => {
