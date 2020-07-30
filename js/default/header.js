@@ -4,12 +4,12 @@
 
 const loadHeader = async () => {
       
-          // import header      
+    // import header     
+    const header = document.querySelector("#header");
     header.innerHTML = await fetchHtmlAsText("/header.html");
-      
 
     // import html elegment
-    const header = document.querySelector("#header");
+
     const headerOpen = document.querySelector("header > .hamburger_btn");
     const headerClose = document.querySelector("header > .bg ");
     const menu = document.querySelector("header > .menu");
@@ -53,7 +53,6 @@ const loadHeader = async () => {
             window.scrollTo(0, menuTop);
         });
     };
-
     const pointer = document.querySelectorAll('.pointer');
     const hearderMenu = [...pointer];
     hearderMenu.forEach((value, index) => { moveEvent(value, '#main'); });
