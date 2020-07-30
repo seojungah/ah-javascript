@@ -15,8 +15,6 @@ document.onreadystatechange = function () {
     }
 };
 
-
-
 /**----------------
       security
 ------------------*/
@@ -24,8 +22,6 @@ document.onreadystatechange = function () {
 window.document.oncontextmenu = () => ("return false");
 window.document.onselectstart = () => ("return false");
 window.document.ondragstart = () => ("return false");
-
-
 
 /**--------------
        HTML
@@ -35,7 +31,6 @@ const fetchHtmlAsText = async (url) => {
     const response = await fetch(url);
     return await response.text();
 };
-
 
 const loadByHtml = ({ tagType, id }) => {
     const tag = document.createElement(tagType);
