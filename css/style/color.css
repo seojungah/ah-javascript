@@ -34,7 +34,7 @@ header > .menu{
 footer,
 ::-webkit-scrollbar-track,
 ::-webkit-resizer {
-  background-color: #111111;
+  background-color: #eee;
 }
 
 @media (max-width: 768px) {
@@ -48,11 +48,15 @@ footer,
 ==================================== */
 
 section,
-header > .menu,
+
 #main > .info,
 footer > .icon > div > a > p,
 header > .menu > .search > input {
   color: #242424;
+}
+
+header > .menu,{
+  color: #fff;
 }
 
 /* ===================================
