@@ -70,6 +70,8 @@ const loadIndexPage = async () => {
                 delay: 2500,
                 disableOnInteraction: true,
             },
+	observer: true,
+		observeParents: true,
         });
         //list
         new Swiper('.swiper-list', {
@@ -78,9 +80,11 @@ const loadIndexPage = async () => {
             spaceBetween: 30,
             pagination: {
                 el: '.swiper-pagination',
-                // type: 'progressbar',
+                type: 'progressbar',
                 clickable: true,
             },
+	observer: true,
+		observeParents: true,
         });`
         ;
 
