@@ -76,36 +76,65 @@ header > .menu > div > h1:hover::before {
 header > .hamburger_btn {
   display: inline-block;
   position: absolute;
-  width: 2rem;
-  height: 2rem;
-  top: 48vh;
-  left: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  top: 46.5vh;
+  left: 1rem;
   z-index: 21;
   transition: 0.5s ease-out;
+  border-radius: 3rem;
 }
 
-header > .hamburger_btn > .navi_line {
+header > .hamburger_btn:active {
+  animation: linear 0.5s infinite wave;
+  background: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(0, 0, 0, 0.5)
+  );
+  background-size: 100%;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 50% 25%;
+  }
+}
+
+header > .hamburger_btn > .line {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header > .hamburger_btn > .line > .navi_line {
   position: absolute;
   width: 100%;
   height: 0.2rem;
   transition: 0.3s linear;
 }
 
-header > .hamburger_btn:hover > .navi_line {
+header > .hamburger_btn:hover > .line > .navi_line {
   transition: 0.3s linear;
 }
 
-header > .hamburger_btn > #line1 {
+header > .hamburger_btn > .line > #line1 {
   top: 0;
   width: 50%;
 }
 
-header > .hamburger_btn > #line2 {
+header > .hamburger_btn > .line > #line2 {
   top: 50%;
   transform: translate(0, -50%);
 }
 
-header > .hamburger_btn > #line3 {
+header > .hamburger_btn > .line > #line3 {
   bottom: 0;
   right: 0;
   width: 50%;
@@ -127,15 +156,15 @@ header > .bg.show {
 header > .hamburger_btn.active {
   left: 40vw;
 }
-header > .hamburger_btn.active > #line1 {
+header > .hamburger_btn.active > line > #line1 {
   transform: rotate(45deg);
   top: 0.65rem;
   left: 0.15rem;
 }
-header > .hamburger_btn.active > #line2 {
+header > .hamburger_btn.active > line > #line2 {
   transform: rotate(-45deg);
 }
-header > .hamburger_btn.active > #line3 {
+header > .hamburger_btn.active > line > #line3 {
   transform: rotate(45deg);
   bottom: 0.4rem;
   right: 0.1rem;

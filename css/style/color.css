@@ -7,7 +7,7 @@ header > .menu > .search > input {
 }
 
 header > .icon > div > a > p,
-header > .hamburger_btn > .navi_line {
+header > .hamburger_btn > .line > .navi_line {
   background-color: #fff;
 }
 
@@ -22,7 +22,7 @@ body,
 }
 
 .swiper-pagination-progressbar,
-header > .hamburger_btn:hover > .navi_line {
+header > .hamburger_btn:hover > .line > .navi_line {
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
@@ -31,6 +31,7 @@ header > .menu,
   background-color: #222222;
 }
 
+header > .hamburger_btn:hover,
 header > .menu > div > h1:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -47,12 +48,12 @@ header > .menu > div > h1:hover {
 
 section,
 #main > .info,
-header > .icon > div > a > p,
-header > .menu > .search > input {
+header > .icon > div > a > p {
   color: #242424;
 }
 
-header > .menu {
+header > .menu,
+header > .menu > .search > input {
   color: #fff;
 }
 
