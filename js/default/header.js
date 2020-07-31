@@ -3,7 +3,7 @@
 ----------------*/
 
 const loadHeader = async () => {
-      
+
     // import header     
     const header = document.querySelector("#header");
     header.innerHTML = await fetchHtmlAsText("/header.html");
@@ -14,9 +14,9 @@ const loadHeader = async () => {
     const headerClose = document.querySelector("header > .bg ");
     const menu = document.querySelector("header > .menu");
     const search = document.querySelector(".menu .search input");
-    const pallet = document.querySelector('#pallet');   
-    const contect = document.querySelector("#contect");      
-     
+    const pallet = document.querySelector('#pallet');
+    const contect = document.querySelector("#contect");
+
 
     // header open & close
     const toggleHeader = (btn) => {
@@ -28,7 +28,7 @@ const loadHeader = async () => {
     };
     const headerBtn = [headerOpen, headerClose];
     headerBtn.forEach((btn) => toggleHeader(btn));
-  
+
     // search bar
     search.addEventListener('keyup', () => {
         const main = document.querySelector('#main');
@@ -42,7 +42,7 @@ const loadHeader = async () => {
             const searchNum = tagUpperCase.indexOf(inputValue);
             if (searchNum > -1) return tag;
         });
-          searchTag.forEach((tag) => tag.parentNode.style.display = '');
+        searchTag.forEach((tag) => tag.parentNode.style.display = '');
     });
 
     // header menu click event 
@@ -85,5 +85,3 @@ const loadHeader = async () => {
 };
 
 loadHeader();
-
-

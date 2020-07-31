@@ -78,7 +78,7 @@ section > div {
 
 section.close {
   width: 90vw;
-  left: 5vw;
+  /* left: 5vw; */
   transition: 0.5s ease-out;
 }
 
