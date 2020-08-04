@@ -70,38 +70,103 @@ header > .menu > div > h1:hover::before {
 }
 
 /* ===================================
-        hamburger button
+               button
 ==================================== */
+
+/* music button */
+
+header > .music_btn{
+  display: inline-block;
+  position: absolute;
+  cursor:pointer;
+  transition: 0.5s ease-out;
+  top: 3vh;
+  left: 1rem;
+  z-index: 21;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 3rem;
+}
+
+
+header > .music_btn:hover > .on{
+  animation: none;
+  opacity: 0.3;
+}
+
+header > .music_btn:active > .on{
+  animation: none;
+  opacity: 1;
+}
+
+
+header > .music_btn > img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header > .music_btn > .on{
+  display: block;
+  animation: 1s ease-out infinite shining;
+}
+
+
+@keyframes shining{
+  0% {
+    opacity: 0.2;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0.2;
+  }
+  }
+
+
+header > .music_btn > .off{
+  display: none;
+}
+
+header > .music_btn > .on.change_on{
+  display: none;
+}
+
+header > .music_btn > .off.change_off{
+  display: block;
+  opacity: 0.3;
+}
+
+header > .music_btn:active > .off.change_off{
+  opacity: 1;
+}
+
+
+/* top button */
+
+header > .top_btn{
+  display: inline-block;
+  position: absolute;
+  top: 93vh;
+  left: 1.5rem;
+  z-index: 21;
+  opacity: 0.5;
+}
+
+/* hamburger button */
 
 header > .hamburger_btn {
   display: inline-block;
   position: absolute;
+  transition: 0.5s ease-out;
   width: 3.5rem;
   height: 3.5rem;
   top: 46.5vh;
   left: 1rem;
   z-index: 21;
-  transition: 0.5s ease-out;
   border-radius: 3rem;
-}
-
-header > .hamburger_btn:active {
-  animation: linear 0.5s infinite wave;
-  background: linear-gradient(
-    -45deg,
-    rgba(255, 255, 255, 0.3),
-    rgba(0, 0, 0, 0.5)
-  );
-  background-size: 100%;
-}
-
-@keyframes wave {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 50% 25%;
-  }
 }
 
 header > .hamburger_btn > .line {
@@ -115,9 +180,9 @@ header > .hamburger_btn > .line {
 
 header > .hamburger_btn > .line > .navi_line {
   position: absolute;
+  transition: 0.3s linear;
   width: 100%;
   height: 0.2rem;
-  transition: 0.3s linear;
 }
 
 header > .hamburger_btn:hover > .line > .navi_line {
@@ -181,14 +246,14 @@ textarea {
 header > .menu > .search {
   display: block;
   position: relative;
-  margin-top: 2.5rem;
   text-align: center;
+  margin-top: 2.5rem;
 }
 
 header > .menu > .search > input {
+  border: 0.1rem solid #fff;
   width: 50%;
   height: 3.5vh;
-  border: 0.1rem solid #fff;
   border-radius: 2rem;
   padding-left: 2rem;
 }
@@ -263,11 +328,11 @@ header > .icon > div > a:hover p {
 
 @media (max-width: 768px) {
   header > .menu {
+    transition: 0.3s linear;
     width: 100vw;
     height: 100vh;
     top: -95vh;
     left: 0;
-    transition: 0.3s linear;
     backdrop-filter: blur(20px);
   }
 

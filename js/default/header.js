@@ -82,6 +82,18 @@ const loadHeader = async () => {
         }
     });
 
+    //Music button
+        const musicBtn = document.querySelector(".music_btn");
+        const musicBtnON = document.querySelector(".music_btn .on");
+        const musicBtnOff = document.querySelector(".music_btn .off");
+       
+        musicBtn.addEventListener('click', () => {
+            musicBtnON.classList.toggle("change_on");
+            musicBtnOff.classList.toggle("change_off");
+        });    
+
+
 };
 
 loadHeader();
+
