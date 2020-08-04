@@ -149,10 +149,26 @@ header > .music_btn:active > .off.change_off{
 header > .top_btn{
   display: inline-block;
   position: absolute;
-  top: 93vh;
-  left: 1.5rem;
+  cursor:pointer;
+  transition: 0.5s ease-out;
+  top: 91vh;
+  left: 1rem;
   z-index: 21;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 3rem;
   opacity: 0.5;
+}
+
+header > .top_btn > img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header > .top_btn:active{
+  opacity: 1;
 }
 
 /* hamburger button */

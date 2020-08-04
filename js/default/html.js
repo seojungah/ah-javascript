@@ -108,4 +108,3 @@ const lightClick = () => {
     swal("You right-clicked inside the div!");
 };
 
-

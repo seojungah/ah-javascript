@@ -26,22 +26,22 @@ sectionItem.forEach((value) => {
 ----------------------*/
 
 const makeIndexScript = [
-    { tagType: "script", id: "header_js", file: "/js/default/header" },
-    { tagType: "script", id: "list_js", file: "/js/item/list" },
-    { tagType: "script", id: "progress_js", file: "/js/item/progress" },
-    { tagType: "script", id: "scroll_js", file: "/js/item/scroll" },
+    { tagType: "script", id: "header_js", file: "/js/default/header.js" },
+    { tagType: "script", id: "list_js", file: "/js/item/list.js" },
+    { tagType: "script", id: "progress_js", file: "/js/item/progress.js" },
+    { tagType: "script", id: "scroll_js", file: "/js/item/scroll.js" },
     { tagType: "script", id: "swiper_js", file: "" },
-    { tagType: "script", id: "sweetalert_js", file: "https://unpkg.com/sweetalert/dist/sweetalert.min" },
+    { tagType: "script", id: "sweetalert_js", file: "https://unpkg.com/sweetalert/dist/sweetalert.min.js" },
+    { tagType: "script", id: "youtube_js", file: "https://www.youtube.com/iframe_api" },
 ];
 
 makeIndexScript.forEach((value, index) => {
     loadByHtml(value);
     if (value.file !== "") {
         const js = document.querySelector(`#${value.id}`);
-        js.src = `${value.file}.js`;
+        js.src = `${value.file}`;
     }
 });
-
 
 /**--------------
     Load Page

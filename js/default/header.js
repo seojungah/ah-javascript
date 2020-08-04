@@ -90,8 +90,42 @@ const loadHeader = async () => {
         musicBtn.addEventListener('click', () => {
             musicBtnON.classList.toggle("change_on");
             musicBtnOff.classList.toggle("change_off");
-        });    
+        });
 
+        //youtube
+        let player;
+            player = new YT.Player('player', {
+                width:'100',
+                height:'100',
+                videoId: 'b58dL4tkwaw',
+                playerVars: {
+                    'autoplay': 1,
+                    'controls': 0,
+                    'rel': 0,
+                    'wmode': 'transparent',
+                    'disablekb':1,
+                },
+                listType:{
+                    'loop':1,
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        
+        function onPlayerReady(event) {
+            event.target.playVideo();
+          }
+    
+
+        // musicBtnOff.addEventListener('click',()=>{
+        //     player.playVideo();
+        // });
+        
+        // musicBtnON.addEventListener('click',()=>{
+        //     player.pauseVideo();
+        // }); 
 
 };
 
