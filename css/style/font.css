@@ -15,17 +15,20 @@
   margin-left: 1.5rem;
   margin-bottom: 2rem;
   font-weight: 700;
+  cursor:Default;
 }
 
 h1 {
   font-size: 1.6rem;
   font-weight: 800;
   margin: 5% auto 2%;
+  cursor:Default;
 }
 
 h2 {
   font-size: 1.4rem;
   font-weight: 500;
+  cursor:Default;
 }
 
 h3 {
@@ -33,11 +36,13 @@ h3 {
   font-weight: 500;
   opacity: 0.6;
   margin: 2% auto 5%;
+  cursor:Default;
 }
 
 h4 {
   font-size: 1rem;
   font-weight: 400;
+  cursor:Default;
 }
 
 p {
@@ -45,18 +50,13 @@ p {
   font-weight: 400;
   line-height: 2rem;
   margin: 5% auto;
+  cursor:Default;
 }
 
 a {
   text-decoration: none;
 }
-/* 클릭하지 않았을 때 */
-a:link {
-}
 
-/* 클릭했을 때 */
-a:visited {
-}
 
 @media (max-width: 768px) {
   h1 {

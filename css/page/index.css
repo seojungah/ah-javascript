@@ -7,7 +7,7 @@ section {
 }
 
 section > div {
-  margin-top: 10rem;
+  margin: 10rem 0;
 }
 
 /* ===================================
@@ -97,7 +97,21 @@ section.close {
 ==================================== */
 
 #list {
+  position: relative;
   width: 100%;
+}
+
+#list > .more {
+  display: inline;
+  position: absolute;
+  top:1rem;
+  right: 1rem;
+  opacity: 0.5;
+}
+
+#list > .more:hover{
+  opacity: 1;
+  cursor:pointer;
 }
 
 #list .swiper-container {
@@ -123,6 +137,7 @@ section.close {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor:pointer;
 }
 
 #list .box > img {
