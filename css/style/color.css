@@ -2,7 +2,8 @@
          background color
 ==================================== */
 
-header > .menu > .search > input {
+header > .menu > .search > input,
+#main > .info > .view_btn {
   background-color: transparent;
 }
 
@@ -26,22 +27,20 @@ header > .hamburger_btn:hover > .line > .navi_line {
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
-header > .menu,
-::-webkit-scrollbar-thumb {
-  background-color: #222222;
-}
-
 header > .music_btn:hover,
 header > .top_btn:hover,
 header > .hamburger_btn:hover,
+header > .menu,
 header > .menu > div > h1:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 768px) {
-  header > .menu {
-    background-color: rgba(23, 23, 23, 0.5);
-  }
+::-webkit-scrollbar-thumb {
+  background-color: rgba(23, 23, 23, 0.5);
+}
+
+header > .menu > .menu_list > h1::before {
+  background-color: #7e00ff;
 }
 
 /* ===================================
@@ -49,13 +48,14 @@ header > .menu > div > h1:hover {
 ==================================== */
 
 section,
-#main > .info,
 header > .icon > div > a > p {
   color: #242424;
 }
 
 header > .menu,
-header > .menu > .search > input {
+#main > .info,
+header > .menu > .search > input,
+#main > .info > .view_btn {
   color: #fff;
 }
 

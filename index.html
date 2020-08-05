@@ -10,6 +10,11 @@
     <script src="js/item/load.js"></script>
     <script src="js/default/html.js"></script>
     <script src="js/page/index.js"></script>
+    <script>
+        document.cookie="safeCookie1=foo; SameSite=Lax";
+        document.cookie="safeCookie2=foo";
+        document.cookie="crossCookie=bar; SameSite=Lax; Secure";
+    </script>
 </body>
 
 </html>

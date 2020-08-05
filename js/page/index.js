@@ -91,6 +91,11 @@ const loadIndexPage = async () => {
         main.classList.toggle('close');
         closeBtn.classList.toggle('close');
         section.classList.toggle('close');
+        if(closeBtn.children[0].src =="http://127.0.0.1:5500/image/icon/material/arrow_left-white-18dp.svg"){
+            closeBtn.children[0].src ="image/icon/material/arrow_left-black-18dp.svg";
+        }else{
+            closeBtn.children[0].src ="image/icon/material/arrow_left-white-18dp.svg";
+        }
     });
 };
 
@@ -108,3 +113,4 @@ const cssListIndex = [
 ];
 
 cssListIndex.forEach((value, index) => (makeFaviconLink({ ...value })));
+

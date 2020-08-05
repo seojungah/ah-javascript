@@ -15,6 +15,7 @@ const loadHeader = async () => {
     const search = document.querySelector(".menu .search input");
     const pallet = document.querySelector('#pallet');
     const contect = document.querySelector("#contect");
+    const menuList = document.querySelector('.menu_list');
 
     // header open & close
     const toggleHeader = (btn) => {
@@ -22,6 +23,7 @@ const loadHeader = async () => {
             headerOpen.classList.toggle('active');
             headerClose.classList.toggle('show');
             menu.classList.toggle('sliding');
+            menuList.classList.toggle('hover');
         });
     };
     const headerBtn = [headerOpen, headerClose];

@@ -1,6 +1,6 @@
 section {
   position: absolute;
-  width: 55vw;
+  width: 54.5vw;
   top: 0;
   right: 0;
   transition: 0.5s ease-out;
@@ -10,17 +10,37 @@ section > div {
   margin: 10rem 0;
 }
 
+/*toggle*/
+
+section.close {
+  width: 94.5vw;
+  /* left: 5vw; */
+  transition: 0.5s ease-out;
+}
+
 /* ===================================
                  Main
 ==================================== */
 
 #main {
   position: fixed;
-  width: 40vw;
+  width: 45vw;
   height: 100vh;
   top: 0;
-  left: 5vw;
+  left: 0;
   z-index: 3;
+  transition: 0.5s ease-out;
+}
+
+#main {
+  background-image: url("https://drive.google.com/uc?export=download&id=1dmx1usczoCC-a1uRdX4BJ5OAeLyJl856");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#main.close {
+  left: -40vw;
   transition: 0.5s ease-out;
 }
 
@@ -33,6 +53,18 @@ section > div {
   top: 99.5vh !important;
 }
  */
+
+#main > .clear_btn {
+  display: none;
+  position: absolute;
+  top: 3vh;
+  right: 2rem;
+  z-index: 10;
+}
+
+#main > .clear_btn.show {
+  display: block;
+}
 
 #main > .info {
   display: block;
@@ -48,6 +80,7 @@ section > div {
   margin: 1rem auto;
   width: 30em;
 }
+
 #main > .info > h1 {
   margin: 0;
 }
@@ -56,6 +89,12 @@ section > div {
   display: block;
   margin: 1rem 0;
   font-size: 3rem;
+}
+
+#main > .info > .view_btn {
+  border: 1px solid #fff;
+  padding-left: 1rem;
+  margin-top: 3rem;
 }
 
 #main > .close_btn {
@@ -72,19 +111,6 @@ section > div {
   width: 4rem;
   height: 4rem;
   opacity: 0.6;
-}
-
-/*toggle*/
-
-section.close {
-  width: 90vw;
-  /* left: 5vw; */
-  transition: 0.5s ease-out;
-}
-
-#main.close {
-  left: -35vw;
-  transition: 0.5s ease-out;
 }
 
 #main > .close_btn.close {
@@ -104,14 +130,14 @@ section.close {
 #list > .more {
   display: inline;
   position: absolute;
-  top:1rem;
+  top: 1rem;
   right: 1rem;
   opacity: 0.5;
 }
 
-#list > .more:hover{
+#list > .more:hover {
   opacity: 1;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 #list .swiper-container {
@@ -123,12 +149,20 @@ section.close {
   margin: 1rem 0.5rem !important;
 }
 
+#list .swiper-pagination {
+  top: 99%;
+}
+
 #list .box {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   box-sizing: border-box;
   /*   border: 1px solid rgba(0, 0, 0, 0.6); */
   transition: 0.5s linear;
-  width: fit-content;
+  width: 25rem;
+  height: 25rem;
 }
 
 #list .box > .title {
@@ -137,7 +171,7 @@ section.close {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  cursor:pointer;
+  cursor: pointer;
 }
 
 #list .box > img {

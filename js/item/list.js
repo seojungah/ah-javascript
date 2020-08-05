@@ -1,56 +1,73 @@
 const makeList = async () => {
+  // list
+  const list = document.querySelector("#list");
+  if (document.querySelector("#list"))
+    list.innerHTML = await fetchHtmlAsText("/list.html");
 
-    // list
-    const list = document.querySelector("#list");
-    if (document.querySelector("#list")) list.innerHTML = await fetchHtmlAsText("/list.html");
+  /**------------------------------------
+              load json file
+    -------------------------------------*/
+  const listItem = document.querySelector("#list .swiper-wrapper");
 
-    //json
-    const listItem =document.querySelector("#list .swiper-wrapper");
-
-    const jsonToHtml = async (url) => {
-        const { projects } = await fetch(url).then(response => response.json()) || [];
-        const html = projects.map(({ id, clas, tag, title, year, text, goggleUrl}) => (
-            `<div id="${id}" class="swiper-slide">
+  const jsonToHtml = async (url) => {
+    const { projects } =
+      (await fetch(url).then((response) => response.json())) || [];
+    const html = projects.map(
+      ({ id, clas, tag, title, year, text, goggleUrl }) =>
+        `<div id="${id}" class="swiper-slide">
               <p class="tag">${tag}</p>
-              <div class="box ${clas}">
+              <div class="box ${clas}" style="background-image:url('https://drive.google.com/uc?export=download&id=${goggleUrl}')">
                  <div class="title">
                     <h2>${title}</h2>
                     <p>${year}</p>
                  </div>
-                 <img src="https://drive.google.com/uc?export=download&id=${goggleUrl}">
               </div>
             </div >`
-        ));
-        return listItem.innerHTML = html.join('');
-    };
+    );
+    listItem.innerHTML = html.join("");
 
-    jsonToHtml('/js/item/projects.json');
-    const boxImage = document.querySelector(".box img");
-};
-makeList();
+    /**------------------------------------
+             list -> main evert
+    -------------------------------------*/
 
-const eventList = async () => {
+    const box = await document.querySelectorAll(".box");
+    const closeMain = document.getElementsByClassName("close");
+    const clearBtn = document.querySelector(".clear_btn");
+    const viewBtn = document.querySelector(".view_btn");
+
+    box.forEach((value) => {
+      const titleStr = value.childNodes[1].childNodes[1].textContent;
+      const yearStr = value.childNodes[1].childNodes[3].textContent;
+      const bgImage = value.style.backgroundImage;
+
+      value.addEventListener("click", () => {
+        //If the mains are closed, Running event.
+        if (closeMain.length > 0) {
+          document.querySelector("#main").classList.toggle("close");
+          document.querySelector(".close_btn").classList.toggle("close");
+          document.querySelector("section").classList.toggle("close");
+        }
+        //change main style.
+        document.querySelector("#main").style.backgroundImage = bgImage;
+        document.querySelector("#main > .info > h1").innerHTML = titleStr;
+        document.querySelector("#main > .info > h3").innerHTML = yearStr;
+        document.querySelector("#main > .info > p").style.display = "none";
+        clearBtn.classList.toggle("show");
+      });
+    });
+
+    clearBtn.addEventListener("click", () => {
+      document.querySelector("#main").style.backgroundImage =
+        'url("https://drive.google.com/uc?export=download&id=1dmx1usczoCC-a1uRdX4BJ5OAeLyJl856")';
+      document.querySelector("#main > .info > h1").innerHTML = "";
+      document.querySelector("#main > .info > h3").innerHTML = "";
+      document.querySelector("#main > .info > p").style.display = "none";
+      clearBtn.classList.toggle("show");
+    });
+  };
+  jsonToHtml("/js/item/projects.json");
 
   //click show main
-  const box = document.querySelectorAll(".box");
-  const listBtn = [...box];
-  const closeMain = document.getElementsByClassName("close");
-
-  if(box.length > 0) {
-    listBtn.forEach((value) => {
-        const titleStr = value.childNodes[1].childNodes[1].textContent;
-        console.log(titleStr);
-        value.addEventListener('click', () => {
-            if (closeMain.length > 0) {
-                document.querySelector("#main").classList.toggle('close');
-                document.querySelector(".close_btn").classList.toggle('close');
-                document.querySelector("section").classList.toggle('close');
-            }
-            document.querySelector("#main").style.backgroundColor = '#e3c3c2';
-            document.querySelector("#main > .info > h1").innerHTML = titleStr;
-            document.querySelector("#main > .info > p").style.display = 'none';
-        });
-    });
-  }
 };
-eventList();
+
+makeList();
