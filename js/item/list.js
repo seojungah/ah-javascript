@@ -1,8 +1,8 @@
 const makeList = async () => {
+
     // list
     const list = document.querySelector("#list");
     if (document.querySelector("#list")) list.innerHTML = await fetchHtmlAsText("/list.html");
-
 
     //json
     const listItem =document.querySelector("#list .swiper-wrapper");
@@ -24,13 +24,10 @@ const makeList = async () => {
         return listItem.innerHTML = html.join('');
     };
 
-    jsonToHtml('/js/item/projects.json')   
+    jsonToHtml('/js/item/projects.json');
     const boxImage = document.querySelector(".box img");
-    console.log(boxImage);
-    
 };
-
-
+makeList();
 
 const eventList = async () => {
 
@@ -40,11 +37,9 @@ const eventList = async () => {
   const closeMain = document.getElementsByClassName("close");
 
   if(box.length > 0) {
-
-
     listBtn.forEach((value) => {
         const titleStr = value.childNodes[1].childNodes[1].textContent;
-
+        console.log(titleStr);
         value.addEventListener('click', () => {
             if (closeMain.length > 0) {
                 document.querySelector("#main").classList.toggle('close');
@@ -56,11 +51,6 @@ const eventList = async () => {
             document.querySelector("#main > .info > p").style.display = 'none';
         });
     });
-
-  };
-
-  console.log(listBtn.length);
-}
-
-makeList();
+  }
+};
 eventList();

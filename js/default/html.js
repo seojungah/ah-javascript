@@ -1,4 +1,3 @@
-
 /**--------------
      loading
 ----------------*/
@@ -14,7 +13,6 @@ document.onreadystatechange = function () {
         }, 1000);
     }
 };
-
 
 /**--------------
        HTML
@@ -92,19 +90,6 @@ const faviconMeta = [
 
 faviconMeta.forEach((value, content) => (makeFaviconMeta({ ...value })));
 
-
 /**----------------
       security
 ------------------*/
-
-// window.document.oncontextmenu = () => ("return false");
-// window.document.onselectstart = () => ("return false");
-// window.document.ondragstart = () => ("return false");
-
-const body = document.querySelector('body');
-body.oncontextmenu = "lightClick()";
-
-const lightClick = () => {
-    swal("You right-clicked inside the div!");
-};
-

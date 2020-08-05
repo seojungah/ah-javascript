@@ -20,7 +20,6 @@ sectionItem.forEach((value) => {
     item.setAttribute("id", value);
 });
 
-
 /**--------------------
       load script
 ----------------------*/
@@ -32,7 +31,6 @@ const makeIndexScript = [
     { tagType: "script", id: "scroll_js", file: "/js/item/scroll.js" },
     { tagType: "script", id: "swiper_js", file: "" },
     { tagType: "script", id: "sweetalert_js", file: "https://unpkg.com/sweetalert/dist/sweetalert.min.js" },
-    { tagType: "script", id: "youtube_js", file: "https://www.youtube.com/iframe_api" },
 ];
 
 makeIndexScript.forEach((value, index) => {
@@ -94,11 +92,9 @@ const loadIndexPage = async () => {
         closeBtn.classList.toggle('close');
         section.classList.toggle('close');
     });
-
 };
 
 loadIndexPage();
-
 
 /**--------------
        css

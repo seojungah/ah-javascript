@@ -9,14 +9,12 @@ const loadHeader = async () => {
     header.innerHTML = await fetchHtmlAsText("/header.html");
 
     // import html elegment
-
     const headerOpen = document.querySelector("header > .hamburger_btn");
     const headerClose = document.querySelector("header > .bg ");
     const menu = document.querySelector("header > .menu");
     const search = document.querySelector(".menu .search input");
     const pallet = document.querySelector('#pallet');
     const contect = document.querySelector("#contect");
-
 
     // header open & close
     const toggleHeader = (btn) => {
@@ -91,42 +89,6 @@ const loadHeader = async () => {
             musicBtnON.classList.toggle("change_on");
             musicBtnOff.classList.toggle("change_off");
         });
-
-        //youtube
-        let player;
-            player = new YT.Player('player', {
-                width:'100',
-                height:'100',
-                videoId: 'b58dL4tkwaw',
-                playerVars: {
-                    'autoplay': 1,
-                    'controls': 0,
-                    'rel': 0,
-                    'wmode': 'transparent',
-                    'disablekb':1,
-                },
-                listType:{
-                    'loop':1,
-                },
-                events: {
-                    'onReady': onPlayerReady,
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-        
-        function onPlayerReady(event) {
-            event.target.playVideo();
-          }
-    
-
-        // musicBtnOff.addEventListener('click',()=>{
-        //     player.playVideo();
-        // });
-        
-        // musicBtnON.addEventListener('click',()=>{
-        //     player.pauseVideo();
-        // }); 
-
 };
 
 loadHeader();
