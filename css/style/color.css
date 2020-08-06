@@ -3,7 +3,10 @@
 ==================================== */
 
 header > .menu > .search > input,
-#main > .info > .view_btn {
+#main > .info > .view_btn,
+.swal-icon--success:after,
+.swal-icon--success:before,
+.swal-icon--success__hide-corners {
   background-color: transparent;
 }
 
@@ -27,6 +30,10 @@ header > .hamburger_btn:hover > .line > .navi_line {
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
+.swal-button:hover {
+  background-color: #464646 !important;
+}
+
 header > .music_btn:hover,
 header > .top_btn:hover,
 header > .hamburger_btn:hover,
@@ -39,7 +46,17 @@ header > .menu > div > h1:hover {
   background-color: rgba(23, 23, 23, 0.5);
 }
 
-header > .menu > .menu_list > h1::before {
+.swal-button,
+.swal-modal {
+  background-color: #242424;
+}
+
+.swal-button:active {
+  background-color: #161616 !important;
+}
+
+header > .menu > .menu_list > h1::before,
+.swal-icon--success__line {
   background-color: #7e00ff;
 }
 
@@ -52,10 +69,15 @@ header > .icon > div > a > p {
   color: #242424;
 }
 
+.swal-text {
+  color: rgba(225, 225, 225, 0.5);
+}
+
 header > .menu,
 #main > .info,
 header > .menu > .search > input,
-#main > .info > .view_btn {
+#main > .info > .view_btn,
+.swal-title {
   color: #fff;
 }
 
@@ -63,10 +85,19 @@ header > .menu > .search > input,
               border
 ==================================== */
 
+.swal-icon--success {
+  border-color: transparent;
+}
+
 header > .icon > div > a > p:after {
   border-bottom-color: #222222;
 }
 
 :root {
   --swiper-theme-color: #fff !important;
+}
+
+.swal-icon--success__ring {
+  border: 4px solid #7e00ff;
+  opacity: 0.4;
 }
