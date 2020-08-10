@@ -59,8 +59,10 @@ const makeList = async () => {
     clearBtn.addEventListener("click", () => {
       document.querySelector("#main").style.backgroundImage =
         'url("https://drive.google.com/uc?export=download&id=1dmx1usczoCC-a1uRdX4BJ5OAeLyJl856")';
-      document.querySelector("#main > .info > h1").innerHTML = "";
-      document.querySelector("#main > .info > h3").innerHTML = "";
+      document.querySelector("#main > .info > h1").innerHTML =
+        "<span>HELLO</span><span>SEO</span><span>JUNGAH</span>";
+      document.querySelector("#main > .info > h3").innerHTML =
+        "<h3>💜UXUI DESIGNER</h3>";
       document.querySelector("#main > .info > p").style.display = "none";
       clearBtn.classList.toggle("show");
     });

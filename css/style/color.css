@@ -101,3 +101,7 @@ header > .icon > div > a > p:after {
   border: 4px solid #7e00ff;
   opacity: 0.4;
 }
+
+button {
+  outline: 0;
+}
