@@ -62,10 +62,6 @@ section.close {
   z-index: 10;
 }
 
-#main > .clear_btn.show {
-  display: block;
-}
-
 #main > .info {
   display: block;
   position: absolute;
@@ -226,4 +222,17 @@ section.close {
   text-align: center;
   margin: 0;
   opacity: 0.4;
+}
+
+/* ===================================
+             portfolio
+==================================== */
+
+#portfolio {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 45vw;
+  width: 55vw;
+  z-index: 30;
 }

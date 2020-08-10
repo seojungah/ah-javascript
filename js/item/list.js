@@ -52,7 +52,7 @@ const makeList = async () => {
         document.querySelector("#main > .info > h1").innerHTML = titleStr;
         document.querySelector("#main > .info > h3").innerHTML = yearStr;
         document.querySelector("#main > .info > p").style.display = "none";
-        clearBtn.classList.toggle("show");
+        clearBtn.style.display = "block";
       });
     });
 
@@ -64,7 +64,7 @@ const makeList = async () => {
       document.querySelector("#main > .info > h3").innerHTML =
         "<h3>💜UXUI DESIGNER</h3>";
       document.querySelector("#main > .info > p").style.display = "none";
-      clearBtn.classList.toggle("show");
+      clearBtn.style.display = "none";
     });
   };
   jsonToHtml("/js/item/projects.json");

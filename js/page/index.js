@@ -3,21 +3,23 @@
 ----------------*/
 
 const makeIndexTag = [
-    { tagType: "header", id: "header" },
-    { tagType: "main", id: "main" },
-    { tagType: "section", id: "section" },
+  { tagType: "header", id: "header" },
+  { tagType: "main", id: "main" },
+  { tagType: "section", id: "section" },
 ];
 
-makeIndexTag.forEach((value) => { loadByHtml(value); });
+makeIndexTag.forEach((value) => {
+  loadByHtml(value);
+});
 
 //section inside
 const section = document.querySelector("#section");
-const sectionItem = ['information', 'list', 'skill'];
+const sectionItem = ["information", "list", "skill"];
 
 sectionItem.forEach((value) => {
-    const item = document.createElement('div');
-    section.appendChild(item);
-    item.setAttribute("id", value);
+  const item = document.createElement("div");
+  section.appendChild(item);
+  item.setAttribute("id", value);
 });
 
 /**--------------------
@@ -25,20 +27,24 @@ sectionItem.forEach((value) => {
 ----------------------*/
 
 const makeIndexScript = [
-    { tagType: "script", id: "header_js", file: "/js/default/header.js" },
-    { tagType: "script", id: "list_js", file: "/js/item/list.js" },
-    { tagType: "script", id: "progress_js", file: "/js/item/progress.js" },
-    { tagType: "script", id: "scroll_js", file: "/js/item/scroll.js" },
-    { tagType: "script", id: "swiper_js", file: "" },
-    { tagType: "script", id: "sweetalert_js", file: "https://unpkg.com/sweetalert/dist/sweetalert.min.js" },
+  { tagType: "script", id: "header_js", file: "/js/default/header.js" },
+  { tagType: "script", id: "list_js", file: "/js/item/list.js" },
+  { tagType: "script", id: "progress_js", file: "/js/item/progress.js" },
+  { tagType: "script", id: "scroll_js", file: "/js/item/scroll.js" },
+  { tagType: "script", id: "swiper_js", file: "" },
+  {
+    tagType: "script",
+    id: "sweetalert_js",
+    file: "https://unpkg.com/sweetalert/dist/sweetalert.min.js",
+  },
 ];
 
 makeIndexScript.forEach((value, index) => {
-    loadByHtml(value);
-    if (value.file !== "") {
-        const js = document.querySelector(`#${value.id}`);
-        js.src = `${value.file}`;
-    }
+  loadByHtml(value);
+  if (value.file !== "") {
+    const js = document.querySelector(`#${value.id}`);
+    js.src = `${value.file}`;
+  }
 });
 
 /**--------------
@@ -46,18 +52,19 @@ makeIndexScript.forEach((value, index) => {
 ----------------*/
 
 const loadIndexPage = async () => {
-    // main
-    const main = document.querySelector("#main");
+  // main
+  const main = document.querySelector("#main");
+  if (document.querySelector("#main")) {
     main.innerHTML = await fetchHtmlAsText("/main.html");
+  }
 
-    // information
-    const information = document.querySelector("#information");
-    information.innerHTML = await fetchHtmlAsText("/information.html");
+  // information
+  const information = document.querySelector("#information");
+  information.innerHTML = await fetchHtmlAsText("/information.html");
 
-    const swiper = document.querySelector("#swiper_js");
-    swiper.type = 'module';
-    swiper.innerHTML =
-        `import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+  const swiper = document.querySelector("#swiper_js");
+  swiper.type = "module";
+  swiper.innerHTML = `import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
         //main
         // new Swiper('.swiper-main', {
         //     direction: 'horizontal',
@@ -81,22 +88,26 @@ const loadIndexPage = async () => {
             },
 	observer: true,
 		observeParents: true,
-        });`
-        ;
+        });`;
 
-    const closeBtn = document.querySelector(".close_btn");
-    const section = document.querySelector("section");
+  const closeBtn = document.querySelector(".close_btn");
+  const section = document.querySelector("section");
 
-    closeBtn.addEventListener('click', () => {
-        main.classList.toggle('close');
-        closeBtn.classList.toggle('close');
-        section.classList.toggle('close');
-        if(closeBtn.children[0].src =="http://127.0.0.1:5500/image/icon/material/arrow_left-white-18dp.svg"){
-            closeBtn.children[0].src ="image/icon/material/arrow_left-black-18dp.svg";
-        }else{
-            closeBtn.children[0].src ="image/icon/material/arrow_left-white-18dp.svg";
-        }
-    });
+  closeBtn.addEventListener("click", () => {
+    main.classList.toggle("close");
+    closeBtn.classList.toggle("close");
+    section.classList.toggle("close");
+    if (
+      closeBtn.children[0].src ==
+      "http://127.0.0.1:5500/image/icon/material/arrow_left-white-18dp.svg"
+    ) {
+      closeBtn.children[0].src =
+        "image/icon/material/arrow_left-black-18dp.svg";
+    } else {
+      closeBtn.children[0].src =
+        "image/icon/material/arrow_left-white-18dp.svg";
+    }
+  });
 };
 
 loadIndexPage();
@@ -106,11 +117,10 @@ loadIndexPage();
 ----------------*/
 
 const cssListIndex = [
-    { rel: 'stylesheet', href: '/css/page/index.css' },
-    { rel: 'stylesheet', href: '/css/page/index_mobile.css' },
-    { rel: 'stylesheet', href: 'https://unpkg.com/swiper/swiper-bundle.css' },
-    { rel: 'stylesheet', href: 'https://unpkg.com/swiper/swiper-bundle.min.css' },
+  { rel: "stylesheet", href: "/css/page/index.css" },
+  { rel: "stylesheet", href: "/css/page/index_mobile.css" },
+  { rel: "stylesheet", href: "https://unpkg.com/swiper/swiper-bundle.css" },
+  { rel: "stylesheet", href: "https://unpkg.com/swiper/swiper-bundle.min.css" },
 ];
 
-cssListIndex.forEach((value, index) => (makeFaviconLink({ ...value })));
-
+cssListIndex.forEach((value, index) => makeFaviconLink({ ...value }));
