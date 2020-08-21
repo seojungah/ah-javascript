@@ -124,3 +124,4 @@ const cssListIndex = [
 ];
 
 cssListIndex.forEach((value, index) => makeFaviconLink({ ...value }));
+

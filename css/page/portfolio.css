@@ -1,7 +1,76 @@
-body {
-  background-color: #fff;
+#portfolio_body {
+  display: block;
+  width: 100%;
 }
 
-button{
-    
+.portfolio_menu {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 60%;
+  margin: 5rem auto;
+  box-sizing: border-box;
+}
+
+.portfolio_menu > button {
+  border: 1px solid transparent;
+  width: 9rem;
+  padding: 0.5rem 0;
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(58, 0, 179, 0.18);
+}
+
+.portfolio_menu > button:hover {
+  transition: 5s ease-out;
+}
+
+.portfolio_menu > button:active {
+  box-shadow: 0.5rem 0.5rem 1rem reba(0, 0, 0, 0.8) inset;
+}
+
+.portfolio_list {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.portfolio_list > .content_box {
+  display: inline-block;
+  position: relative;
+}
+
+.portfolio_list > .content_box > .image {
+  display: block;
+  position: relative;
+  width: 30vw;
+  height: 20vh;
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  border-radius: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio_list > .content_box > .image:hover {
+  background-size: 150% auto;
+  transition: 1s ease-out;
+}
+
+.portfolio_list > .content_box > .title {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.portfolio_list > .content_box > .title > span {
+  position: absolute;
+  opacity: 0.6;
+  top: 0;
+  right: 0;
 }
