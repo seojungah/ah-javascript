@@ -112,6 +112,7 @@ const loadHeader = async () => {
   const choiseBar = document.querySelector(".menu_list > h1 > div");
   projectsBtn.addEventListener("click", () => {
     portfolio.style.right = "0";
+    portfolio.style.display = "block";
     choiseBar.classList.add("choise_bar");
     setTimeout(() => {
       section.style.display = "none";

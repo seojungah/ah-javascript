@@ -1,6 +1,6 @@
-const makeButton = async (value) => {
+const makeButton = async (value, where) => {
   const button = document.createElement("button");
-  const menu = document.querySelector(".portfolio_menu");
+  const menu = document.querySelector(where);
   button.setAttribute("class", value);
   button.innerHTML = value;
   button.lang = "en";
@@ -9,7 +9,12 @@ const makeButton = async (value) => {
 
 const portfoiloMenu = ["ALL", "UXUI", "WEB", "ILLUST", "ANIMATION", "ADD"];
 portfoiloMenu.forEach((value) => {
-  makeButton(value);
+  makeButton(value, ".portfolio_menu");
+});
+
+const portfoiloYearMenu = ["2020", "2019", "2018"];
+portfoiloYearMenu.forEach((value) => {
+  makeButton(value, ".portfolio_year_menu");
 });
 
 const makeContent = async () => {

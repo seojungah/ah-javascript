@@ -90,21 +90,25 @@ const loadIndexPage = async () => {
 		observeParents: true,
         });`;
 
-  const closeBtn = document.querySelector(".close_btn");
+  const mainCloseBtn = document.querySelector(".main_btn");
   const section = document.querySelector("section");
+  const portfolioPage = document.querySelector("#portfolio");
 
-  closeBtn.addEventListener("click", () => {
+  mainCloseBtn.addEventListener("click", () => {
     main.classList.toggle("close");
-    closeBtn.classList.toggle("close");
+    mainCloseBtn.classList.toggle("close");
     section.classList.toggle("close");
+    if (portfolioPage.style.right !== "55vw") {
+      portfolioPage.classList.toggle("close");
+    }
     if (
-      closeBtn.children[0].src ==
+      mainCloseBtn.children[0].src ==
       "http://127.0.0.1:5500/image/icon/material/arrow_left-white-18dp.svg"
     ) {
-      closeBtn.children[0].src =
+      mainCloseBtn.children[0].src =
         "image/icon/material/arrow_left-black-18dp.svg";
     } else {
-      closeBtn.children[0].src =
+      mainCloseBtn.children[0].src =
         "image/icon/material/arrow_left-white-18dp.svg";
     }
   });
@@ -124,4 +128,3 @@ const cssListIndex = [
 ];
 
 cssListIndex.forEach((value, index) => makeFaviconLink({ ...value }));
-

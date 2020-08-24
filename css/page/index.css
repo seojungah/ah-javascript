@@ -93,23 +93,23 @@ section.close {
   margin-top: 3rem;
 }
 
-#main > .close_btn {
+#main > .main_btn {
   display: inline-block;
   position: absolute;
   top: 50%;
   right: 0;
   transform: translate(0, -50%);
-  z-index: 4;
+  z-index: 100;
   transition: 0.5s ease-out;
 }
 
-#main > .close_btn > img {
+#main > .main_btn > img {
   width: 4rem;
   height: 4rem;
   opacity: 0.6;
 }
 
-#main > .close_btn.close {
+#main > .main_btn.close {
   right: -3vw;
   transform: rotate(180deg);
 }
@@ -229,12 +229,18 @@ section.close {
 ==================================== */
 
 #portfolio {
-  display: block;
+  display: none;
   position: fixed;
   top: 0;
   right: -55%;
   width: 55vw;
   height: 100vh;
-  z-index: 30;
+  z-index: 15;
   transition: 0.6s ease-out;
+}
+
+#portfolio.close {
+  width: 95vw;
+  /* left: 5vw; */
+  transition: 0.5s ease-out;
 }
