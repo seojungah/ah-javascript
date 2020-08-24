@@ -232,8 +232,9 @@ section.close {
   display: block;
   position: fixed;
   top: 0;
-  left: 45vw;
+  right: -55%;
   width: 55vw;
   height: 100vh;
   z-index: 30;
+  transition: 0.6s ease-out;
 }

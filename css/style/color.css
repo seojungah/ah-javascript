@@ -58,7 +58,8 @@ header > .menu > div > h1:hover {
 }
 
 header > .menu > .menu_list > h1::before,
-.swal-icon--success__line {
+.swal-icon--success__line,
+.choise_bar {
   background-color: #7e00ff;
 }
 

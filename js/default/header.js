@@ -93,25 +93,30 @@ const loadHeader = async () => {
     musicBtnON.classList.toggle("change_on");
     musicBtnOff.classList.toggle("change_off");
   });
+
+  // refresh
+  // location.href = location.href;
+  //     location.reload(true);
+  // history.go(0);
+
+  //menu - home
+
+  const homeBtn = document.querySelector("#home");
+  homeBtn.addEventListener("click", () => {});
+
+  // foltfolio
+  const section = document.querySelector("#section");
+  const portfolio = document.querySelector("#portfolio");
+
+  const projectsBtn = document.querySelector("#projects");
+  const choiseBar = document.querySelector(".menu_list > h1 > div");
+  projectsBtn.addEventListener("click", () => {
+    portfolio.style.right = "0";
+    choiseBar.classList.add("choise_bar");
+    setTimeout(() => {
+      section.style.display = "none";
+    }, 600);
+  });
 };
 
 loadHeader();
-
-/**--------------------
-       foltfolio
-----------------------*/
-
-const loadPortfolioBtn = async () => {
-  const section = document.querySelector("#section");
-  section.style.display = "none";
-  const portfolio = document.querySelector("#portfolio");
-
-  const btn = document.querySelector("#projects");
-  btn.addEventListener("click", () => {
-    section.style.display = "none";
-    portfolio.style.display = "block";
-  });
-  // const hidePage
-};
-
-loadPortfolioBtn();
