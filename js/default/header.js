@@ -15,6 +15,17 @@ const loadHeader = async () => {
   const pallet = document.querySelector("#pallet");
   const contect = document.querySelector("#contect");
   const menuList = document.querySelector(".menu_list");
+  const portfolio = document.querySelector("#portfolio");
+
+  //show portfolio
+  const showPortfolioList = () => {
+    portfolio.style.right = "0";
+    portfolio.style.display = "block";
+    choiseBar.classList.add("choise_bar");
+    setTimeout(() => {
+      section.style.display = "none";
+    }, 600);
+  };
 
   // header open & close
   const toggleHeader = (btn) => {
@@ -30,11 +41,10 @@ const loadHeader = async () => {
 
   // search bar
   search.addEventListener("keyup", () => {
-    const main = document.querySelector("#main");
-    main.style.display = "none";
+    showPortfolioList();
 
     const inputValue = search.value.toUpperCase();
-    const itemTag = [...document.querySelectorAll(".portfolio .name")];
+    const itemTag = [...document.querySelectorAll(".content_box > .tag")];
 
     const searchTag = itemTag.filter((tag) => {
       const tagUpperCase = tag.innerText.toUpperCase();
@@ -69,7 +79,6 @@ const loadHeader = async () => {
 
   contect.addEventListener("click", () => {
     try {
-      textArea.select();
       const copy = document.execCommand("copy");
       if (copy)
         swal({
@@ -78,10 +87,11 @@ const loadHeader = async () => {
           icon: "success",
           button: "OK",
         });
-      document.body.removeChild(textArea);
     } catch (err) {
       console.log("Unable to copy");
     }
+    textArea.select();
+    document.body.removeChild(textArea);
   });
 
   //Music button
@@ -106,17 +116,10 @@ const loadHeader = async () => {
 
   // foltfolio
   const section = document.querySelector("#section");
-  const portfolio = document.querySelector("#portfolio");
-
   const projectsBtn = document.querySelector("#projects");
   const choiseBar = document.querySelector(".menu_list > h1 > div");
   projectsBtn.addEventListener("click", () => {
-    portfolio.style.right = "0";
-    portfolio.style.display = "block";
-    choiseBar.classList.add("choise_bar");
-    setTimeout(() => {
-      section.style.display = "none";
-    }, 600);
+    showPortfolioList();
   });
 };
 
