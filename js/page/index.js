@@ -112,6 +112,9 @@ const loadIndexPage = async () => {
         "image/icon/material/arrow_left-white-18dp.svg";
     }
   });
+
+  const moreBtn = document.querySelector(".more");
+  bb;
 };
 
 loadIndexPage();

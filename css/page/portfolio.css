@@ -63,7 +63,7 @@
   display: block;
   position: relative;
   width: 30vw;
-  height: 20vh;
+  height: 25vh;
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -78,13 +78,17 @@
 
 .portfolio_list > .content_box > .title {
   position: relative;
-  width: 100%;
-  margin-bottom: 1rem;
+  width: 30vw;
+  margin: 1rem 0;
 }
 
 .portfolio_list > .content_box > .title > span {
   position: absolute;
   opacity: 0.6;
   top: 0;
-  right: 0;
+  right: 0.5rem;
+}
+
+.portfolio_list > .content_box > .title > h4 {
+  padding-left: 0.5rem;
 }
