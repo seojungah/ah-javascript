@@ -52,6 +52,7 @@ const makeList = async () => {
         document.querySelector("#main > .info > h1").innerHTML = titleStr;
         document.querySelector("#main > .info > h3").innerHTML = yearStr;
         document.querySelector("#main > .info > p").style.display = "none";
+        document.querySelector(".view_btn > span").innerHTML = "view";
         clearBtn.style.display = "block";
       });
     });
