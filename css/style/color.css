@@ -67,6 +67,10 @@ header > .menu > .menu_list > h1::before,
   background-color: #3a00b3;
 }
 
+#information > .my_tag > div {
+  background-color: rgba(#3a00b3, 0.6);
+}
+
 /* ===================================
              font color
 ==================================== */
@@ -85,7 +89,8 @@ header > .menu,
 header > .menu > .search > input,
 #main > .info > .view_btn,
 .swal-title,
-.portfolio_menu > button {
+.portfolio_menu > button,
+#information > .my_tag > div {
   color: #fff;
 }
 
