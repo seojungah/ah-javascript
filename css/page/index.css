@@ -148,7 +148,10 @@ section.close {
 
 #information > .my_tag > div {
   display: inline;
-  padding: 0.5rem 2rem;
+  padding: 0.3rem 1.6rem;
+  margin-right: 0.4rem;
+  font-size: 0.8rem;
+  border-radius: 1rem;
 }
 
 /* ===================================
