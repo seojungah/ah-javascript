@@ -19,6 +19,9 @@ const cssList = [
   { rel: "stylesheet", href: "./css/default/scroller.css" },
   { rel: "stylesheet", href: "./css/default/header.css" },
   { rel: "stylesheet", href: "./css/default/progress.css" },
+  { rel: "stylesheet", href: "/css/page/index.css" },
+  { rel: "stylesheet", href: "https://unpkg.com/swiper/swiper-bundle.css" },
+  { rel: "stylesheet", href: "https://unpkg.com/swiper/swiper-bundle.min.css" },
 ];
 
 cssList.forEach((value, index) => makeCssLink({ ...value }));
@@ -31,6 +34,7 @@ const makeIndexTag = [
   { tagType: "header", id: "header" },
   { tagType: "main", id: "main" },
   { tagType: "section", id: "section" },
+  { tagType: "div", id: "item-popup" },
 ];
 
 makeIndexTag.forEach((value) => {
@@ -56,6 +60,7 @@ const makeIndexScript = [
   { tagType: "script", id: "list_js", file: "/js/item/list.js" },
   { tagType: "script", id: "progress_js", file: "/js/item/progress.js" },
   { tagType: "script", id: "scroll_js", file: "/js/item/scroll.js" },
+  { tagType: "script", id: "popup_js", file: "/js/page/popup.js" },
   { tagType: "script", id: "swiper_js", file: "" },
   {
     tagType: "script",
@@ -81,6 +86,12 @@ const loadIndexPage = async () => {
   const main = document.querySelector("#main");
   if (document.querySelector("#main")) {
     main.innerHTML = await fetchHtmlAsText("/main.html");
+  }
+
+  // item-popup
+  const itemPopup = document.querySelector("#item-popup");
+  if (document.querySelector("#item-popup")) {
+    itemPopup.innerHTML = await fetchHtmlAsText("/item-popup.html");
   }
 
   // information
@@ -139,19 +150,45 @@ const loadIndexPage = async () => {
   });
 
   const moreBtn = document.querySelector(".more");
+
+  /**--------------
+        popup
+  ----------------*/
+
+  const loadPopup = () => {
+    const itemPopup = document.querySelector("#item-popup");
+    const viewBtn = document.querySelector(".view_btn");
+    const viewBtnStr = document.querySelector(".view_btn > span");
+
+    viewBtn.addEventListener("click", () => {
+      if (viewBtnStr.innerHTML === "github") {
+        window.open("https://github.com/seojungah/seojungah.github.io");
+      } else if (viewBtnStr.innerHTML === "view") {
+        itemPopup.style.display = "block";
+      } else {
+        try {
+          const error = document.execCommand("error");
+          if (error)
+            swal({
+              title: "ERROR",
+              text: "ÁË¼ÛÇÕ´Ï´Ù. ¿À·ù°¡ »ý°å½À´Ï´Ù.",
+              icon: "error",
+              button: "´Ý±â",
+            });
+        } catch (err) {
+          console.log("error");
+        }
+      }
+    });
+
+    const closePopup = (value) => {
+      value.addEventListener("click", () => {
+        itemPopup.style.display = "none";
+      });
+    };
+  };
+
+  loadPopup();
 };
 
 loadIndexPage();
-
-/**--------------
-       css
-----------------*/
-
-const cssListIndex = [
-  { rel: "stylesheet", href: "/css/page/index.css" },
-  { rel: "stylesheet", href: "/css/page/index_mobile.css" },
-  { rel: "stylesheet", href: "https://unpkg.com/swiper/swiper-bundle.css" },
-  { rel: "stylesheet", href: "https://unpkg.com/swiper/swiper-bundle.min.css" },
-];
-
-cssListIndex.forEach((value, index) => makeFaviconLink({ ...value }));

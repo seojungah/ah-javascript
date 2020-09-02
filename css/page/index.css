@@ -178,6 +178,7 @@ section.close {
 
 #list .swiper-container {
   margin-left: 1rem;
+  width: 98%;
 }
 
 #list .swiper-slide {
@@ -283,4 +284,30 @@ section.close {
   width: 95vw;
   /* left: 5vw; */
   transition: 0.5s ease-out;
+}
+
+#item-popup {
+  display: none;
+  position: fixed;
+  z-index: 900;
+  width: 100vw;
+  height: 100vh;
+}
+
+#item-popup > .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#item-popup > .page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 80%;
+  transform: translate(-50%, -50%);
 }

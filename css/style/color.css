@@ -12,7 +12,8 @@ header > .menu > .search > input,
 }
 
 header > .icon > div > a > p,
-header > .hamburger_btn > .line > .navi_line {
+header > .hamburger_btn > .line > .navi_line,
+#item-popup > .page {
   background-color: #fff;
 }
 

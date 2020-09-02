@@ -34,6 +34,7 @@ const makeList = async () => {
     const closeMain = document.getElementsByClassName("close");
     const clearBtn = document.querySelector(".clear_btn");
     const viewBtn = document.querySelector(".view_btn");
+    const viewBtnStr = document.querySelector(".view_btn > span");
 
     box.forEach((value) => {
       const titleStr = value.childNodes[1].childNodes[1].textContent;
@@ -52,7 +53,7 @@ const makeList = async () => {
         document.querySelector("#main > .info > h1").innerHTML = titleStr;
         document.querySelector("#main > .info > h3").innerHTML = yearStr;
         document.querySelector("#main > .info > p").style.display = "none";
-        document.querySelector(".view_btn > span").innerHTML = "view";
+        viewBtnStr.innerHTML = "view";
         clearBtn.style.display = "block";
       });
     });
@@ -66,8 +67,15 @@ const makeList = async () => {
         "<h3>💜UXUI DESIGNER</h3>";
       document.querySelector("#main > .info > p").style.display = "none";
       clearBtn.style.display = "none";
+      viewBtnStr.innerHTML = "github";
     });
+
+    //main inside go button
+    const itemPopup = document.querySelector("#item-popup");
+
+   
   };
+
   jsonToHtml("/js/item/projects.json");
 
   //click show main

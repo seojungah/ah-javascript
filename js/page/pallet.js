@@ -42,7 +42,6 @@ const cssList = [
   { rel: "stylesheet", href: "./css/default/header.css" },
   { rel: "stylesheet", href: "./css/default/progress.css" },
   { rel: "stylesheet", href: "./css/page/pallet.css" },
-  { rel: "stylesheet", href: "./css/page/pallet_mobile.css" },
 ];
 
 cssList.forEach((value, index) => makeCssLink({ ...value }));

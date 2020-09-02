@@ -104,15 +104,13 @@ const loadHeader = async () => {
     musicBtnOff.classList.toggle("change_off");
   });
 
-  // refresh
-  // location.href = location.href;
-  //     location.reload(true);
-  // history.go(0);
-
   //menu - home
-
   const homeBtn = document.querySelector("#home");
-  homeBtn.addEventListener("click", () => {});
+  homeBtn.addEventListener("click", () => {
+    location.href = location.href;
+    //     location.reload(true);
+    // history.go(0);
+  });
 
   // foltfolio
   const section = document.querySelector("#section");
