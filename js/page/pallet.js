@@ -3,8 +3,6 @@
 ----------------------*/
 
 const makeIndexScript = [
-  { tagType: "script", id: "header_js", file: "default/header" },
-  { tagType: "script", id: "footer_js", file: "default/footer" },
   { tagType: "script", id: "progress_js", file: "item/progress" },
 ];
 
@@ -15,10 +13,6 @@ makeIndexScript.forEach((value, index) => {
     js.src = `js/${value.file}.js`;
   }
 });
-
-/**--------------
-       css
-----------------*/
 
 /**--------------
        css
@@ -50,10 +44,7 @@ cssList.forEach((value, index) => makeCssLink({ ...value }));
     load tag
 ----------------*/
 
-const makeIndexTag = [
-  { tagType: "header", id: "header" },
-  { tagType: "footer", id: "footer" },
-];
+const makeIndexTag = [{ tagType: "header", id: "header" }];
 
 makeIndexTag.forEach((value) => {
   loadByHtml(value);
@@ -66,3 +57,12 @@ makeIndexTag.forEach((value) => {
 const makeContent = async () => {};
 
 makeContent();
+
+/**--------------
+      back
+----------------*/
+
+const backHome = document.querySelector(".back_home");
+backHome.addEventListener("click", () => {
+  location.href = "/index.html";
+});

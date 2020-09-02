@@ -17,16 +17,6 @@ const loadHeader = async () => {
   const menuList = document.querySelector(".menu_list");
   const portfolio = document.querySelector("#portfolio");
 
-  //show portfolio
-  const showPortfolioList = () => {
-    portfolio.style.right = "0";
-    portfolio.style.display = "block";
-    choiseBar.classList.add("choise_bar");
-    setTimeout(() => {
-      section.style.display = "none";
-    }, 600);
-  };
-
   // header open & close
   const toggleHeader = (btn) => {
     btn.addEventListener("click", () => {
@@ -66,10 +56,6 @@ const loadHeader = async () => {
   const hearderMenu = [...pointer];
   hearderMenu.forEach((value, index) => {
     moveEvent(value, "#main");
-  });
-
-  pallet.addEventListener("click", () => {
-    location.href = "/pallet.html";
   });
 
   //Clipboard - sweetalert.js -> alert
@@ -118,6 +104,21 @@ const loadHeader = async () => {
   const choiseBar = document.querySelector(".menu_list > h1 > div");
   projectsBtn.addEventListener("click", () => {
     showPortfolioList();
+  });
+
+  //show portfolio
+  const showPortfolioList = () => {
+    portfolio.style.right = "0";
+    portfolio.style.display = "block";
+    choiseBar.classList.add("choise_bar");
+    setTimeout(() => {
+      section.style.display = "none";
+    }, 600);
+  };
+
+  //show pallet
+  pallet.addEventListener("click", () => {
+    location.href = "/pallet.html";
   });
 };
 

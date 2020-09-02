@@ -58,6 +58,10 @@ header > .menu > div > h1:hover {
   background-color: #161616 !important;
 }
 
+.back_home {
+  background-color: #2196f3;
+}
+
 header > .menu > .menu_list > h1::before,
 .swal-icon--success__line,
 .choise_bar {
@@ -94,6 +98,7 @@ header > .menu > .search > input,
 #information > .my_tag > div {
   color: #fff;
 }
+
 
 /* ===================================
               border
