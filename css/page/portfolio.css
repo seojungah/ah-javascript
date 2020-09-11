@@ -75,7 +75,7 @@
 }
 
 .portfolio_list > .content_box > .image:hover {
-  background-size: 150% auto;
+  background-size: 120% auto;
   transition: 1s ease-out;
 }
 

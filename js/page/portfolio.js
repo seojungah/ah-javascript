@@ -24,10 +24,10 @@ const makeContent = async () => {
     const { projects } =
       (await fetch(url).then((response) => response.json())) || [];
     const html = projects.map(
-      ({ id, clas, tag, title, year, text, goggleUrl }) =>
+      ({ id, clas, tag, title, year, text, titleImage }) =>
         `<div id="${id}" class="content_box ${clas}">
           <p class="tag">${tag}</p>
-          <div class="image" style="background-image:url('https://drive.google.com/uc?export=download&id=${goggleUrl}')"></div>
+          <div class="image" style="background-image:url('https://drive.google.com/uc?export=download&id=${titleImage}')"></div>
           <div class="title">
             <h4>${title}</h4>
             <span class="year">${year}</span>

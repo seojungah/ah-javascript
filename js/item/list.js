@@ -13,10 +13,10 @@ const makeList = async () => {
     const { projects } =
       (await fetch(url).then((response) => response.json())) || [];
     const html = projects.map(
-      ({ id, clas, tag, title, year, text, goggleUrl }) =>
+      ({ id, clas, tag, title, year, text, listImage }) =>
         `<div id="${id}" class="swiper-slide">
               <p class="tag">${tag}</p>
-              <div class="box ${clas}" style="background-image:url('https://drive.google.com/uc?export=download&id=${goggleUrl}')">
+              <div class="box ${clas}" style="background-image:url('https://drive.google.com/uc?export=download&id=${listImage}')">
                  <div class="title">
                     <h2>${title}</h2>
                     <p>${year}</p>
@@ -72,8 +72,6 @@ const makeList = async () => {
 
     //main inside go button
     const itemPopup = document.querySelector("#item-popup");
-
-   
   };
 
   jsonToHtml("/js/item/projects.json");
