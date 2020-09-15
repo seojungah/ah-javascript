@@ -164,6 +164,7 @@ const loadIndexPage = async () => {
       if (viewBtnStr.innerHTML === "github") {
         window.open("https://github.com/seojungah/seojungah.github.io");
       } else if (viewBtnStr.innerHTML === "view") {
+        
         itemPopup.style.display = "block";
       } else {
         try {
