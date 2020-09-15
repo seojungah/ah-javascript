@@ -13,10 +13,10 @@ const makeList = async () => {
     const { projects } =
       (await fetch(url).then((response) => response.json())) || [];
     const html = projects.map(
-      ({ id, clas, tag, title, year, text, listImage }) =>
+      ({ id, clas, tag, title, year, text, titleImage }) =>
         `<div id="${id}" class="swiper-slide">
               <p class="tag">${tag}</p>
-              <div class="box ${clas}" style="background-image:url('https://drive.google.com/uc?export=download&id=${listImage}')">
+              <div class="box ${clas}" style="background-image:url('https://drive.google.com/uc?export=download&id=${titleImage}')">
                  <div class="title">
                     <h2>${title}</h2>
                     <p>${year}</p>

@@ -49,6 +49,10 @@ header > .menu > div > h1:hover {
   background-color: rgba(23, 23, 23, 0.5);
 }
 
+.portfolio_menu > button {
+  background-color: #383838;
+}
+
 .swal-button,
 .swal-modal {
   background-color: #242424;
@@ -66,10 +70,6 @@ header > .menu > .menu_list > h1::before,
 .swal-icon--success__line,
 .choise_bar {
   background-color: #7e00ff;
-}
-
-.portfolio_menu > button {
-  background-color: #3a00b3;
 }
 
 #information > .my_tag > div {
@@ -98,7 +98,6 @@ header > .menu > .search > input,
 #information > .my_tag > div {
   color: #fff;
 }
-
 
 /* ===================================
               border

@@ -200,6 +200,7 @@ section.close {
   transition: 0.5s linear;
   width: 25rem;
   height: 25rem;
+  color: #fff;
 }
 
 #list .box > .title {

@@ -19,7 +19,7 @@
   padding: 0.5rem 0;
   margin: 1rem;
   border-radius: 1rem;
-  box-shadow: 0.5rem 0.5rem 1rem rgba(58, 0, 179, 0.18);
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.18);
   cursor: pointer;
 }
 
@@ -90,6 +90,7 @@
   opacity: 0.6;
   top: 0;
   right: 0.5rem;
+  font-size: 0.85rem;
 }
 
 .portfolio_list > .content_box > .title > h4 {

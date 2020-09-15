@@ -12,7 +12,7 @@ portfoiloMenu.forEach((value) => {
   makeButton(value, ".portfolio_menu");
 });
 
-const portfoiloYearMenu = ["2020", "2019", "2018"];
+const portfoiloYearMenu = ["2020", "2019", "2018","2017"];
 portfoiloYearMenu.forEach((value) => {
   makeButton(value, ".portfolio_year_menu");
 });
@@ -24,10 +24,10 @@ const makeContent = async () => {
     const { projects } =
       (await fetch(url).then((response) => response.json())) || [];
     const html = projects.map(
-      ({ id, clas, tag, title, year, text, titleImage }) =>
+      ({ id, clas, tag, title, year, text, listImage }) =>
         `<div id="${id}" class="content_box ${clas}">
           <p class="tag">${tag}</p>
-          <div class="image" style="background-image:url('https://drive.google.com/uc?export=download&id=${titleImage}')"></div>
+          <div class="image" style="background-image:url('https://drive.google.com/uc?export=download&id=${listImage}')"></div>
           <div class="title">
             <h4>${title}</h4>
             <span class="year">${year}</span>

@@ -109,8 +109,8 @@ const loadIndexPage = async () => {
         //         delay: 2500,
         //         disableOnInteraction: true,
         //     },
-	    // observer: true,
-		// observeParents: true,
+	      //   observer: true,
+		    //  observeParents: true,
         // });
         //list
         new Swiper('.swiper-list', {
@@ -122,8 +122,9 @@ const loadIndexPage = async () => {
                 type: 'progressbar',
                 clickable: true,
             },
-	observer: true,
-		observeParents: true,
+	          observer: true,
+            observeParents: true,
+            loop: true,
         });`;
 
   const mainCloseBtn = document.querySelector(".main_btn");
@@ -164,7 +165,6 @@ const loadIndexPage = async () => {
       if (viewBtnStr.innerHTML === "github") {
         window.open("https://github.com/seojungah/seojungah.github.io");
       } else if (viewBtnStr.innerHTML === "view") {
-        
         itemPopup.style.display = "block";
       } else {
         try {
@@ -172,9 +172,9 @@ const loadIndexPage = async () => {
           if (error)
             swal({
               title: "ERROR",
-              text: "ак╪шгу╢о╢ы. ©ю╥Ы╟║ ╩Щ╟Е╫ю╢о╢ы.",
+              text: "ц│ц▀б╪ц⌡ц┤ц∙б╢ц▐б╢ц≥. б©ц─б╥ц╧б╟б║ б╩ц╫б╟ц╔б╫ц─б╢ц▐б╢ц≥.",
               icon: "error",
-              button: "╢щ╠Б",
+              button: "б╢ц²б╠ц╒",
             });
         } catch (err) {
           console.log("error");
