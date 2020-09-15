@@ -115,16 +115,16 @@ const loadIndexPage = async () => {
         //list
         new Swiper('.swiper-list', {
             direction: 'horizontal',
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 30,
+            freeMode: true,
             pagination: {
                 el: '.swiper-pagination',
                 type: 'progressbar',
                 clickable: true,
             },
-	          observer: true,
-            observeParents: true,
-            loop: true,
+	          // observer: true,
+            // observeParents: true,
         });`;
 
   const mainCloseBtn = document.querySelector(".main_btn");
