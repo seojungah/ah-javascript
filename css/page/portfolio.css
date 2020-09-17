@@ -54,12 +54,14 @@
   justify-content: space-around;
   width: 100%;
   box-sizing: border-box;
+  margin: 1rem 0 8rem;
 }
 
 .portfolio_list > .content_box {
   display: inline-block;
   position: relative;
   cursor: pointer;
+  margin: 2rem 0;
 }
 
 .portfolio_list > .content_box > .image {
