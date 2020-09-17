@@ -15,6 +15,20 @@ document.onreadystatechange = function () {
 };
 
 /**--------------
+       css
+----------------*/
+
+const makeCssLink = ({ rel, type, sizes, href }) => {
+  let link = document.createElement("link");
+  rel && (link.rel = rel);
+  type && (link.type = type);
+  sizes && (link.sizes = sizes);
+  href && (link.href = href);
+
+  document.getElementsByTagName("head")[0].appendChild(link);
+};
+
+/**--------------
        HTML
 ----------------*/
 

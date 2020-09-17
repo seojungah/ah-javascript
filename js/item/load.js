@@ -4,7 +4,7 @@ const loading = async () => {
   document.body.appendChild(divLoad);
   const h1Load = document.createElement("h1");
   divLoad.appendChild(h1Load);
-  const imgLoad = document.createElement("img");
+  const imgLoad = document.createElement("iframe");
   divLoad.appendChild(imgLoad);
 
   divLoad.setAttribute("id", "loading");
@@ -13,7 +13,6 @@ const loading = async () => {
 
   const loading = document.querySelector("#loading");
   loading.style.position = "fixed";
-  loading.style.overflow = "hidden";
   loading.style.width = "100%";
   loading.style.height = "100%";
   loading.style.background = "#161519";
@@ -22,15 +21,19 @@ const loading = async () => {
 
   const loadingText = document.querySelector("#loading_text");
   loadingText.style.display = "block";
-  loadingText.style.width = "10%";
-  loadingText.style.margin = "8% auto 1%";
+  loadingText.style.width = "100%";
+  loadingText.style.margin = "15% auto 0";
   loadingText.style.color = "#fff";
-  loadingText.innerText = "loading page...";
+  loadingText.style.textAlign = "center";
+  loadingText.style.fontWeight = "300";
+  loadingText.style.fontSize = "1rem";
+  loadingText.innerText = "loading page ...!";
 
   const loadingImage = document.querySelector("#loading_img");
-  loadingImage.src = "";
+  loadingImage.src = "/load-animation.html";
   loadingImage.style.display = "block";
-  loadingImage.style.width = "30%";
+  loadingImage.style.width = "50%";
+  loadingImage.style.height = "30%";
   loadingImage.style.margin = "0 auto";
 };
 

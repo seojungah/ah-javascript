@@ -2,16 +2,6 @@
        css
 ----------------*/
 
-const makeCssLink = ({ rel, type, sizes, href }) => {
-  let link = document.createElement("link");
-  rel && (link.rel = rel);
-  type && (link.type = type);
-  sizes && (link.sizes = sizes);
-  href && (link.href = href);
-
-  document.getElementsByTagName("head")[0].appendChild(link);
-};
-
 const cssList = [
   { rel: "stylesheet", href: "./css/style/reset.css" },
   { rel: "stylesheet", href: "./css/style/font.css" },
@@ -19,7 +9,7 @@ const cssList = [
   { rel: "stylesheet", href: "./css/default/scroller.css" },
   { rel: "stylesheet", href: "./css/default/header.css" },
   { rel: "stylesheet", href: "./css/default/progress.css" },
-  { rel: "stylesheet", href: "/css/page/index.css" },
+  { rel: "stylesheet", href: "./css/page/index.css" },
   { rel: "stylesheet", href: "https://unpkg.com/swiper/swiper-bundle.css" },
   { rel: "stylesheet", href: "https://unpkg.com/swiper/swiper-bundle.min.css" },
 ];
