@@ -60,6 +60,7 @@ section.close {
   top: 3vh;
   right: 2rem;
   z-index: 10;
+  cursor: pointer;
 }
 
 #main > .info {
@@ -201,6 +202,7 @@ section.close {
   width: 25rem;
   height: 25rem;
   color: #fff;
+  cursor: pointer;
 }
 
 #list .box > .title {
