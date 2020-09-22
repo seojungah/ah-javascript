@@ -18,16 +18,6 @@ makeIndexScript.forEach((value, index) => {
        css
 ----------------*/
 
-const makeCssLink = ({ rel, type, sizes, href }) => {
-  let link = document.createElement("link");
-  rel && (link.rel = rel);
-  type && (link.type = type);
-  sizes && (link.sizes = sizes);
-  href && (link.href = href);
-
-  document.getElementsByTagName("head")[0].appendChild(link);
-};
-
 const cssList = [
   { rel: "stylesheet", href: "./css/style/reset.css" },
   { rel: "stylesheet", href: "./css/style/font.css" },

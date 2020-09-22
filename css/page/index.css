@@ -7,7 +7,7 @@ section {
 }
 
 section > div {
-  margin: 10rem 0;
+  margin: 5rem 0 10rem;
 }
 
 /*toggle*/
@@ -122,7 +122,11 @@ section.close {
 ==================================== */
 
 #information > div {
-  margin: 1.5rem 2rem 3rem;
+  margin: 1rem 2rem 3rem;
+}
+
+#information > img {
+  margin: 0.5rem 2rem;
 }
 
 #information > div > h2 {

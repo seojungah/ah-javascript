@@ -3,7 +3,6 @@
 포트폴리오 & 프로그램 스터딩 사이트입니다.
 ### 🔗 SITE
 * [Go to Portfolio site](https://seojungah.github.io/)
-* [Style Pallet](https://seojungah.github.io/style.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ##  Programming Languages

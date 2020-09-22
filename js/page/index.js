@@ -133,10 +133,10 @@ const loadIndexPage = async () => {
       "http://127.0.0.1:5500/image/icon/material/arrow_left-white-18dp.svg"
     ) {
       mainCloseBtn.children[0].src =
-        "image/icon/material/arrow_left-black-18dp.svg";
+        "http://127.0.0.1:5500/image/icon/material/arrow_left-black-18dp.svg";
     } else {
       mainCloseBtn.children[0].src =
-        "image/icon/material/arrow_left-white-18dp.svg";
+        "http://127.0.0.1:5500/image/icon/material/arrow_left-white-18dp.svg";
     }
   });
 
