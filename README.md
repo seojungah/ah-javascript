@@ -2,7 +2,7 @@
 저의 개인적인 공간에 오신것을 환영합니다.  
 포트폴리오 & 프로그램 스터딩 사이트입니다.
 ### 🔗 SITE
-* [Go to Portfolio site](https://seojungah.github.io/)
+* [Go to Portfolio site](https://seojungah.github.io/ah-javascript/)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 ##  Programming Languages
